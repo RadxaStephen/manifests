@@ -1,8 +1,10 @@
-<?xml revision="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
   <remote name="rk" fetch="ssh://git@www.rockchip.com.cn/linux/"/>
   <default remote="rk" sync-j="4"/>
+
+  <include name="include/rk3588_doc.xml" />
 
   <project name="android/rk/platform/system/rk_tee_user" path="external/security/rk_tee_user" revision="refs/tags/linux-5.10-gen-rkr2"/>
   <project name="android/rk/u-boot" path="u-boot" revision="refs/tags/linux-5.10-gen-rkr2"/>
