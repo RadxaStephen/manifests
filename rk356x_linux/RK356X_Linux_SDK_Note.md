@@ -7,6 +7,51 @@
 [TOC]
 
 ---
+## rk356x_linux_release_v1.2.4_20220418.xml Note
+
+**Buildroot**:
+
+```
+- update buildroot 2018.02-rc3
+	* - Gstreamer upgrade to 1.20.0 version
+	* - Bump glibc to 2.34
+	* - Bump weston to 10.0.0
+	...
+```
+
+**Debian**:
+
+```
+- update Debian10
+	* - 2775061 ubuntu-build-service: remove hostapd and gstreamer1.0-libav
+	* - 4da1c99 overlay: fix the ssh service
+	* - 2a5f79c packages: update mpp/gst-rkmpp/xserver
+	* - df16049 scripts: add post-build.sh to handle fstab
+	* - e15ea61 overlay-debug: delete unused tests
+	* - 1cc248a packages: update rkaiq for rk356x
+	* - 966eed2 overlay-debug: update rockchip-test
+        ...
+```
+
+**Kernel**:
+
+```
+- update Kernel to 4.19.232
+        * - Suport RK630
+        * - Update isp to v1.8.0
+        * - Fix USB some issues
+        * - Update rga
+        ...
+```
+
+**Yocto**:
+
+```
+- Bump yocto to 3.4.1
+```
+
+- Update rkbin/u-boot/aiserver/rkwifibt...
+
 ## rk356x_linux_release_v1.2.3_20220108.xml Note
 
 **Buildroot**:
