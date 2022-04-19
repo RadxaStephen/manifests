@@ -21,6 +21,6 @@
     <linkfile dest="tools/linux/Linux_Pack_Firmware/rockdev/mkupdate.sh" src="linux/Linux_Pack_Firmware/rockdev/rk3588-mkupdate.sh"/>
     <linkfile dest="tools/linux/Linux_Pack_Firmware/rockdev/package-file" src="linux/Linux_Pack_Firmware/rockdev/rk3588-package-file"/>
   </project>
-  <project name="rk/kernel" path="kernel" revision="1369f0391d2ac4ef30d2888175860442ac933d7e" upstream="develop-5.10-nvr-rk3588"/>
+  <project name="rk/kernel" path="kernel" revision="0fe1629831e26b652ab09cb071cf7467f36bbd79" upstream="develop-5.10-nvr-rk3588"/>
   <project name="rk/rkbin" path="rkbin" revision="ee82811c0319e7e55d5f539703e2fc4ff18d69f9" upstream="rk3588-nvr"/>
 </manifest>
