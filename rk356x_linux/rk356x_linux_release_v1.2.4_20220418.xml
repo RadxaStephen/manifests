@@ -7,65 +7,65 @@
   <include name="include/yocto.xml" />
   <include name="include/rk356x_doc.xml" />
 
-  <project dest-branch="develop-next" name="android/rk/platform/system/rk_tee_user" path="external/security/rk_tee_user" revision="dd9d4d313ebd2d74b3cdc31c76770bef0dacdc66" upstream="develop-next"/>
-  <project dest-branch="next-dev" name="android/rk/u-boot" path="u-boot" revision="59b5687fd7a9887c7c7fb10d3058ed90b396a043" upstream="next-dev"/>
-  <project dest-branch="master" name="linux/app-new/qfm" path="app/qfm" revision="7e94be4d1ce41e395909da8b963ad46c65ca285f" upstream="master"/>
-  <project dest-branch="develop" name="linux/app/QLauncher" path="app/QLauncher" revision="dd5644dcdbcfa99569c52681efcee2f8b033ae8a" upstream="develop"/>
-  <project dest-branch="master" name="linux/app/aiserver" path="app/aiserver" revision="01ee68447028cc663d891c82361cac1d93620500" upstream="master"/>
-  <project dest-branch="master" name="linux/app/eptz_demo" path="app/eptz_demo" revision="eefc46ba96e15e52d191b0db310cfb16ecfd7f40" upstream="master"/>
-  <project dest-branch="master" name="linux/app/multivideoplayer" path="app/multivideoplayer" revision="5d566e0b2ab416c251b54d59d6237e7164c7e270" upstream="master"/>
-  <project dest-branch="master" name="linux/app/qcamera" path="app/qcamera" revision="7069b20389144d7f420f3a3ba26fdfdd36dcf36f" upstream="master"/>
-  <project dest-branch="master" name="linux/app/qplayer" path="app/qplayer" revision="0121646c9fe2335eef9a963071d07b797a17487e" upstream="master"/>
-  <project dest-branch="develop" name="linux/app/settings" path="app/qsetting" revision="7719da2d42787bac1a6fe075f2ddf6157cd5d678" upstream="develop"/>
-  <project dest-branch="master" name="linux/bsp/external/bluetooth_bsa" path="external/bluetooth_bsa" revision="51b1afeefd0984dc1965379513a2931e85d281fa" upstream="master"/>
-  <project dest-branch="master" name="linux/bsp/external/broadcom_bsa" path="external/broadcom_bsa" revision="46234ce7a904794754bba79cb7c9f26d39605311" upstream="master"/>
+  <project name="android/rk/platform/system/rk_tee_user" path="external/security/rk_tee_user" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="android/rk/u-boot" path="u-boot" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/app-new/qfm" path="app/qfm" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/app/QLauncher" path="app/QLauncher" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/app/aiserver" path="app/aiserver" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/app/eptz_demo" path="app/eptz_demo" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/app/multivideoplayer" path="app/multivideoplayer" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/app/qcamera" path="app/qcamera" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/app/qplayer" path="app/qplayer" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/app/settings" path="app/qsetting" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/bsp/external/bluetooth_bsa" path="external/bluetooth_bsa" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/bsp/external/broadcom_bsa" path="external/broadcom_bsa" revision="refs/tags/linux-4.19-gen-rkr2"/>
   <project name="linux/buildroot" path="buildroot" revision="refs/tags/linux-4.19-gen-rkr2">
     <linkfile dest="Makefile" src="build/Makefile"/>
     <linkfile dest="envsetup.sh" src="build/envsetup.sh"/>
   </project>
-  <project dest-branch="master" name="linux/debian" path="debian" revision="refs/tags/linux-4.19-gen-rkr2"/>
-  <project dest-branch="master" name="linux/device/rockchip" path="device/rockchip" revision="e0900da49d04927bc1e63e38b38d3bde7e7bfce7" upstream="master">
+  <project name="linux/debian" path="debian" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/device/rockchip" path="device/rockchip" revision="refs/tags/linux-4.19-gen-rkr2">
     <linkfile dest="mkfirmware.sh" src="common/mkfirmware.sh"/>
     <linkfile dest="build.sh" src="common/build.sh"/>
     <linkfile dest="rkflash.sh" src="common/rkflash.sh"/>
     <linkfile dest="device/rockchip/.target_product" src="rk356x"/>
   </project>
-  <project dest-branch="master" name="linux/external/alsa-config" path="external/alsa-config" revision="5489f656bef8d6a0929582bd4148bd4b6e982a38" upstream="master"/>
-  <project dest-branch="master" name="linux/external/avb" path="external/avb" revision="64b5ea0130d7440084796f6a23d7cd91fac988b8" upstream="master"/>
-  <project dest-branch="master" name="linux/external/ble_wificonfig" path="external/ble_wificonfig" revision="3b56e0e268634216df1f992d944bb30158e86786" upstream="master"/>
-  <project dest-branch="master" name="linux/external/bluez-alsa" path="external/bluez-alsa" revision="e383251a22fef7213b7e5a804e4c7a7ca621c80d" upstream="master"/>
-  <project dest-branch="rk356x" name="linux/external/camera_engine_rkaiq" path="external/camera_engine_rkaiq" revision="ff46530cd4a22c41f8261dec53c3bfa6bfb82c3b" upstream="rk356x"/>
-  <project dest-branch="master" name="linux/external/chromium" path="external/chromium" revision="bba90aee6a986fca85e8cf79c2917ebf5a2b6e17" upstream="master"/>
-  <project dest-branch="master" name="linux/external/common_algorithm" path="external/common_algorithm" revision="28cffb1a6eac5e3b32e7467efc21bdef32af2f47" upstream="master"/>
-  <project dest-branch="master" name="linux/external/deviceio_release" path="external/deviceio_release" revision="187439b6c9ed867c5a28d8b39cb2ecf19ba9dae6" upstream="master"/>
-  <project dest-branch="master" name="linux/external/eq_drc_process" path="external/eq_drc_process" revision="6fe472aa76ed71922742863c8f94222dab3dbf3c" upstream="master"/>
-  <project dest-branch="master" name="linux/external/libglCompositor" path="external/libglCompositor" revision="5dcd40eb0d8a44ae7eccd4961aea6b01c0f78180" upstream="master"/>
-  <project dest-branch="master" name="linux/external/rk_pcba_test" path="external/rk_pcba_test" revision="36e07775f017df15a8f20e62f52cb59e1ed3ae10" upstream="master"/>
-  <project dest-branch="master" name="linux/external/rkfacial" path="external/rkfacial" revision="8d37181704e2e3d1ab604e1b81d948808398ba23" upstream="master"/>
-  <project dest-branch="master" name="linux/external/rkscript" path="external/rkscript" revision="e99e6dcc9afc7450142b1eafd3b7c5ac5a9eadae" upstream="master"/>
-  <project dest-branch="master" name="linux/external/rktoolkit" path="external/rktoolkit" revision="6eafc640027b3620e20ce7bcf563dd608b5b3838" upstream="master"/>
-  <project dest-branch="master" name="linux/external/rkupdate" path="external/rkupdate" revision="534d8750105c2649e24648b40551fa1304f5eeab" upstream="master"/>
-  <project dest-branch="master" name="linux/external/rkwifibt" path="external/rkwifibt" revision="421b7dd8f3c67f66910710838a0be03f3575a3c9" upstream="master"/>
-  <project dest-branch="master" name="linux/external/uac_app" path="external/uac_app" revision="ea59dca532288686841ad6ba64b0adf68c655bd8" upstream="master"/>
-  <project dest-branch="develop-4.19" name="linux/external/uvc_app" path="external/uvc_app" revision="97915cfca3f11b828de2a289a3c233fd6dbef6f5" upstream="develop-4.19"/>
+  <project name="linux/external/alsa-config" path="external/alsa-config" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/avb" path="external/avb" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/ble_wificonfig" path="external/ble_wificonfig" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/bluez-alsa" path="external/bluez-alsa" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/camera_engine_rkaiq" path="external/camera_engine_rkaiq" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/chromium" path="external/chromium" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/common_algorithm" path="external/common_algorithm" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/deviceio_release" path="external/deviceio_release" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/eq_drc_process" path="external/eq_drc_process" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/libglCompositor" path="external/libglCompositor" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/rk_pcba_test" path="external/rk_pcba_test" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/rkfacial" path="external/rkfacial" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/rkscript" path="external/rkscript" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/rktoolkit" path="external/rktoolkit" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/rkupdate" path="external/rkupdate" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/rkwifibt" path="external/rkwifibt" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/uac_app" path="external/uac_app" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/external/uvc_app" path="external/uvc_app" revision="refs/tags/linux-4.19-gen-rkr2"/>
   <project name="linux/gstreamer-rockchip" path="external/gstreamer-rockchip" revision="refs/tags/linux-4.19-gen-rkr2"/>
-  <project dest-branch="master" name="linux/libmali" path="external/libmali" revision="ba714e875f2f154d8c83fb4ac0109301871aaaf6" upstream="master"/>
-  <project dest-branch="im2d" name="linux/linux-rga" path="external/linux-rga" revision="1e2f0dbb838de3512a8a29143196d7b5e460e1ca" upstream="im2d"/>
-  <project dest-branch="develop" name="linux/recovery" path="external/recovery" revision="bcff1fa1c102de2adf667e98971864a91667b622" upstream="develop"/>
-  <project dest-branch="master" name="linux/rockit" path="external/rockit" revision="88b44e851be63bdddd863b5b8eebaf158cae45ea" upstream="master"/>
-  <project dest-branch="master" name="linux/security/bin" path="external/security/bin" revision="68a2fde8aadcfde9fec65af03db2c641d6631675" upstream="master"/>
-  <project dest-branch="master" name="linux/tools" path="tools" revision="9bbabe0b04740b82d31764461977d38122152c5d" upstream="master">
+  <project name="linux/libmali" path="external/libmali" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/linux-rga" path="external/linux-rga" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/recovery" path="external/recovery" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/rockit" path="external/rockit" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/security/bin" path="external/security/bin" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/tools" path="tools" revision="refs/tags/linux-4.19-gen-rkr2">
     <linkfile dest="tools/windows/RKDevTool/RKDevTool_Release/config.cfg" src="windows/RKDevTool/RKDevTool_Release/rk356x-config.cfg"/>
     <linkfile dest="tools/windows/RKDevTool/rockdev/package-file" src="windows/RKDevTool/rockdev/rk356x-package-file"/>
     <linkfile dest="tools/windows/RKDevTool/rockdev/mkupdate.bat" src="windows/RKDevTool/rockdev/rk356x-mkupdate.bat"/>
     <linkfile dest="tools/linux/Linux_Pack_Firmware/rockdev/mkupdate.sh" src="linux/Linux_Pack_Firmware/rockdev/rk356x-mkupdate.sh"/>
     <linkfile dest="tools/linux/Linux_Pack_Firmware/rockdev/package-file" src="linux/Linux_Pack_Firmware/rockdev/rk356x-package-file"/>
   </project>
-  <project dest-branch="stable-4.19-rk356x" name="rk/kernel" path="kernel" revision="0f7e0ac36b285a1c7facfd7d87304123da4ac3fe" upstream="stable-4.19-rk356x"/>
-  <project dest-branch="develop" name="rk/mpp" path="external/mpp" revision="c2f3236d3b89fc037c263c0b2b32f32a43f9bf49" upstream="develop"/>
-  <project dest-branch="master" name="rk/prebuilts/gcc-buildroot-9.3.0-2020.03-x86_64_aarch64-rockchip-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-buildroot-9.3.0-2020.03-x86_64_aarch64-rockchip-linux-gnu" revision="427f5439bf87835ff3b20746acc8aaafba7d4f53" upstream="master"/>
-  <project dest-branch="master" name="rk/prebuilts/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" revision="f96f76d6be89a6e28d4dac1f233f9aca9921f69b" upstream="master"/>
-  <project dest-branch="master" name="rk/rkbin" path="rkbin" revision="394316547f86d79b463b032b3a401c39f4854b4a" upstream="master"/>
-  <project dest-branch="master" name="rk/rknn-toolkit2" path="external/rknn-toolkit2" revision="1fc1fa917d6a44732c2fbcaf546e81782cc23b97" upstream="master"/>
-  <project dest-branch="master" name="rk/rknpu2" path="external/rknpu2" revision="a5488476ec94815d6a7181544d824d617e863bfd" upstream="master"/>
+  <project name="rk/kernel" path="kernel" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="rk/mpp" path="external/mpp" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="rk/prebuilts/gcc-buildroot-9.3.0-2020.03-x86_64_aarch64-rockchip-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-buildroot-9.3.0-2020.03-x86_64_aarch64-rockchip-linux-gnu" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="rk/prebuilts/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="rk/rkbin" path="rkbin" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="rk/rknn-toolkit2" path="external/rknn-toolkit2" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="rk/rknpu2" path="external/rknpu2" revision="refs/tags/linux-4.19-gen-rkr2"/>
 </manifest>
