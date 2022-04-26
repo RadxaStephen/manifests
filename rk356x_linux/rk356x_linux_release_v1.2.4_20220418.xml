@@ -8,7 +8,7 @@
   <include name="include/rk356x_doc.xml" />
 
   <project name="android/rk/platform/system/rk_tee_user" path="external/security/rk_tee_user" revision="refs/tags/linux-4.19-gen-rkr2"/>
-  <project name="android/rk/u-boot" path="u-boot" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="android/rk/u-boot" path="u-boot" revision="refs/tags/linux-4.19-gen-rkr2.1"/>
   <project name="linux/app-new/qfm" path="app/qfm" revision="refs/tags/linux-4.19-gen-rkr2"/>
   <project name="linux/app/QLauncher" path="app/QLauncher" revision="refs/tags/linux-4.19-gen-rkr2"/>
   <project name="linux/app/aiserver" path="app/aiserver" revision="refs/tags/linux-4.19-gen-rkr2"/>
@@ -61,7 +61,7 @@
     <linkfile dest="tools/linux/Linux_Pack_Firmware/rockdev/mkupdate.sh" src="linux/Linux_Pack_Firmware/rockdev/rk356x-mkupdate.sh"/>
     <linkfile dest="tools/linux/Linux_Pack_Firmware/rockdev/package-file" src="linux/Linux_Pack_Firmware/rockdev/rk356x-package-file"/>
   </project>
-  <project name="rk/kernel" path="kernel" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="rk/kernel" path="kernel" revision="refs/tags/linux-4.19-gen-rkr2.1"/>
   <project name="rk/mpp" path="external/mpp" revision="refs/tags/linux-4.19-gen-rkr2"/>
   <project name="rk/prebuilts/gcc-buildroot-9.3.0-2020.03-x86_64_aarch64-rockchip-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-buildroot-9.3.0-2020.03-x86_64_aarch64-rockchip-linux-gnu" revision="refs/tags/linux-4.19-gen-rkr2"/>
   <project name="rk/prebuilts/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" revision="refs/tags/linux-4.19-gen-rkr2"/>
