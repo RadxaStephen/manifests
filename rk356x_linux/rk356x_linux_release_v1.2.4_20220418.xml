@@ -16,6 +16,7 @@
   <project name="linux/app/multivideoplayer" path="app/multivideoplayer" revision="refs/tags/linux-4.19-gen-rkr2"/>
   <project name="linux/app/qcamera" path="app/qcamera" revision="refs/tags/linux-4.19-gen-rkr2"/>
   <project name="linux/app/qplayer" path="app/qplayer" revision="refs/tags/linux-4.19-gen-rkr2"/>
+  <project name="linux/app/rkaiq_tool_server" path="app/rkaiq_tool_server" revision="refs/tags/linux-4.19-gen-rkr2"/>
   <project name="linux/app/settings" path="app/qsetting" revision="refs/tags/linux-4.19-gen-rkr2"/>
   <project name="linux/bsp/external/bluetooth_bsa" path="external/bluetooth_bsa" revision="refs/tags/linux-4.19-gen-rkr2"/>
   <project name="linux/bsp/external/broadcom_bsa" path="external/broadcom_bsa" revision="refs/tags/linux-4.19-gen-rkr2"/>
