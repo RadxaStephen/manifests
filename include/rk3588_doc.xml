@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-<project name="linux/bsp/docs" path="docs" revision="refs/tags/linux-5.10-gen-rkr2.1">
+<project name="linux/bsp/docs" path="docs" revision="refs/tags/linux-5.10-gen-rkr3">
     <linkfile src="Rockchip_Developer_Guide_Linux_Software_CN.pdf" dest="docs/.Socs/RK3588/Rockchip_Developer_Guide_Linux_Software_CN.pdf"/>
+    <linkfile src="Common/AUDIO/Rockchip_Developer_Guide_Audio_CN.pdf" dest="docs/.Socs/RK3588/Debian/Rockchip_Developer_Guide_Audio_CN.pdf"/>
+    <linkfile src="Linux/ApplicationNote/Rockchip_Developer_Guide_Debian_CN.pdf" dest="docs/.Socs/RK3588/Debian/Rockchip_Developer_Guide_Debian_CN.pdf"/>
+    <linkfile src="Linux/ApplicationNote/Rockchip_Developer_Guide_Debian_Docker_EN.pdf" dest="docs/.Socs/RK3588/Debian/Rockchip_Developer_Guide_Debian_Docker_EN.pdf"/>
+    <linkfile src="Linux/ApplicationNote/Rockchip_Developer_Guide_Debian_EN.pdf" dest="docs/.Socs/RK3588/Debian/Rockchip_Developer_Guide_Debian_EN.pdf"/>
 </project>
-<project name="linux/bsp/internal_doc" path="docs/.Socs" revision="refs/tags/linux-5.10-gen-rkr2.1">
+<project name="linux/bsp/internal_doc" path="docs/.Socs" revision="refs/tags/linux-5.10-gen-rkr3">
     <linkfile src="RK3588" dest="docs/RK3588"/>
 </project>
 </manifest>
