@@ -7,6 +7,68 @@
 [TOC]
 
 ---
+## rk356x_linux_release_v1.3.0_20220620.xml Note
+
+**Buildroot**:
+
+```
+- Update buildroot 2018.02-rc3
+	* - Fix sd upgrade and boot issue with SDDiskTool
+	* - Switch weston to dispaly as launcher
+	* - Support eglfs
+	* - Support AFBC
+	* - Support vulkan and vkmark
+	* - Update weston to fix some issues
+	* - Update gstreamer1 to fix hang issue
+	* - Update configure to disable RGA by default
+	* - Update gstreamer1 to fix some issue with v4l2src plugin
+	* - Update rockchip-test to match new version
+	* - Upgrade wayland to buildroot upstream's 1.20.0
+	* - Upgrade to Chromium-wayland to 101.0.4951.54
+	* - Upgrade RK356X NPU to v1.3.0
+	...
+```
+
+**Debian**:
+
+```
+- Update Debian10
+	* - Update the font to chinese by default
+	* - Update mirrors.ustc.edu.cn for source.list
+	* - Update mpp/gst-rkmpp/xserver
+	* - Update rockchip-test
+	* - Update gstreamer to fix the format issues
+	* - Update Powermanager for s2r
+	* - Fixes cheese app issues
+	* - Add rktoolkit and partition init for recovery
+	* - Reduce the rootfs size
+    ...
+```
+
+**Kernel**:
+
+```
+- Update Kernel to 4.19.232
+    * - Update pcie3phy firmware for RK3568
+    * - Fixes the GPU OPP error with stress tests
+    ...
+```
+
+**Yocto**:
+
+```
+- Update Yocto to 3.4.1
+	* - Support Chromium to 101.0.4951
+	* - Bump xserver/v4l-utils/v4l-mpp/gst-mpp/mpp
+	* - Update rkwifibt-firmware and rockchip-libmali
+```
+
+**Other**:
+
+```
+- Update rkbin/u-boot/tools/docs/gstreamer-rockchip/mpp...
+```
+
 ## rk356x_linux_release_v1.2.4_20220418.xml Note
 
 **Buildroot**:
@@ -183,7 +245,7 @@
 	...
 ```
 
-## rk356x_linux_release_v1.2.1_20211105.xml Note
+## rk356x_linux_release_v1.2.0_20210930.xml Note
 
 **app**:
 
@@ -325,7 +387,6 @@
 	* - gstreamer-rockchip: Switch to meson build system
 ```
 
-
 **Buildroot**:
 
 ```
@@ -400,477 +461,6 @@
 	* - tools: windows: update ParameterTool to v1.2
 	* - linux: Linux_Pack_Firmware: add new package file
 	...
-```
-
-## rk356x_linux_release_v1.1.3_20210805.xml Note
-
-**app**:
-
-```
-- update aiserver
-	* - eptz parameter adjustment.
-	* - [aiserver/vendor/eptz] File name correction.
-	* - [aiserver/vendor/eptz] fix compile error in lastest commit.
-
-- update rkaiq_tool_server
-	* - d702dc1 raw capture: fix multi-frame add overflow issue
-	* - 86a01ba Linux: simply remove link librkaiq
-	* - 4f432e0 Linux: do not kill rkaiq_3A_server or app
-	* - efffa5c tcp server: do not handle signal on its own thread
-```
-
-**external**:
-
-```
-
-- update gstreamer-rockchip
-	* - rockchipmpp: Use gint and gchar
-	* - mppenc: Handle keyframe requests
-	* - rkximage: Use "zpos" property as well
-	* - mppallocator: Drop custom mmap
-	* - mppenc: Report error when input buffer is too small
-	* - rockchipmpp: Fix RGA error when src buf is not dma buf
-	* - rockchipmpp: Workaround pixel stride error
-	* - mpph264enc: Fix memory leak in set_src_caps
-	* - mppjpegdec: Support setting output format
-	* - rockchipmpp: Fix MPP format endian error
-	* - rockchipmpp: Use height as vstride in RGA conversion
-
-- update mpp
-	* - [drm]: Add mmap flag detection
-	* - [misc]: chmod some files to 644
-	* - [h264d_parse]: skip sp/si slice
-	* - [drm]: stop using drm_mmap and drm_munmap
-	* - [mpp_enc]: Fix qp delta_ip & delta_vi check issue
-	* - [h264d]: matching macro MAX_NUM_DPB_LAYERS with code
-	* - [h265d]: Reduce  malloc/free frequency of sps/pps
-
-- libmali
-	* - 08e7448 (HEAD, rk/master, m/master) meson: Force MESA_EGL_NO_X11_HEADER for non-x11 winsys
-	* - cd3d4f7 meson: Add required packages in pkgconfig
-
-- linux-rga
-	* - Update version.
-	* - im2d_api: revert some config of crop mode in improcess
-	* - Fix an error.
-	* - Correct some information in the document.
-	* - Fix "unknown type name ‘int16_t’" in rga.h
-	* - Support BGR565/BGRA5551/BGRA4444.
-	* - Optimize libgra.
-
-- update common_algorithm/libglCompositor/recovery/rkfacial/rkwifibt
-```
-
-**U-boot**:
-
-```
-- drm/rockchip: vop2: add adjust cursor plane
-- cmd: rockusb: convert return vlaue from block layer
-- clk: rockchip: rk3568: add i2s3 clk
-- rockchip: dts: rk3568: Resync from kernel-4.19
-```
-
-**Buildroot (2018.02-rc3)**:
-
-```
-- configs/rockchip: Use new custom local kernel option
-- glibc: Support auto detecting kernel headers version
-- {linux,package/linux-headers}: Support custom local kernel
-- {linux,package/linux-headers}: Support virtual linux
-- {linux,package/linux-headers}: Bump to buildroot upstream
-- gcc: Bump default version to 9.x
-- rockchip/wifibt: Stop caring about kernel versions
-- configs/rockchip: Enable BR2_PACKAGE_GLIBC_GEN_LD_CACHE by default
-- glibc: Allow error when generating ld cache
-- glibc: Drop 2.22
-- bind: Support min-cache-ttl
-- bind: Run named as root
-- dnsmasq: Bump to buildroot upstream's 2.85
-- bind: Bump to buildroot upstream's 9.11.31
-- package: rockchip: camera_engine_rkaiq: remove dependence on host-camera_engine_rkaiq
-- qt5wayland: Update patches for 5.9 and 5.12
-- unscd: Add BR2_PACKAGE_UNSCD_HOSTS_CACHE
-- unscd: Bump to buildroot upstream 0.54
-- qt5wayland: Update patches
-- qt5wayland: Disable wayland-server when not wanted
-- gst1-plugins-good: v4l2: Do not renegotiate if only framerate changed
-- config: rockchip: add alexa config
-- package: rockchip: add alexa-smart-screen-sdk
-- package: rockchip: add apl-core-library
-- package: rockchip: add avs-device-sdk
-- package: doxygen: add config for host build
-- websocketpp: new package
-- package: add libasio
-- wampcc: needs atomic
-- wampcc: needs C++
-- wampcc: new package
-- toolchain: add BR2_TOOLCHAIN_SUPPORTS_ALWAYS_LOCKFREE_ATOMIC_INTS hidden option
-- package: rockchip: camera_engine_rkaiq: symbol link to target IQFILE for FakeCamera.xml/bin
-- package: alsa-lib: pcm: Fix two bugs in snd_pcm_area_silence()
-- libdrm-cursor: Add package
-```
-
-**Debian10 (buster)**:
-
-```
-- packages: add mpv/ffmpeg for hardware accelerator
-- rkscripts: Don't remove the build dir
-- packages: update rga/mpp/gstreamer-rockchip
-- packages: fixes moving cursor or hotplug issues
-- overlay: udev: Run drm-hotplug.sh as daemon
-```
-
-**Kernel (4.19)**:
-
-```
-- video/rockchip: rga2: Fix rga2_dma_flush_page warnning
-- arm64: dts: rockchip: rk3568-nvr: enabled rknpu_mmu
-- drm/rockchip: analogix_dp: clear the eDP flag in output_if
-- drm/rockchip: dw_hdmi: Add property to show whether sink is DVI
-- drm/rockchip: dw_hdmi: Add property to switch HDMI/DVI mode
-- drm/rockchip: dw_hdmi: Support set quant range take effect immediately
-- drm/bridge: dw-hdmi: Make sure to output full range RGB in DVI mode
-- serial: 8250_port: fix UART DL check when setting divisor.
-- video/rockchip: rga2: Remove the useless code about the src1 channel
-- media: i2c: ov7251 support 640x480@120fps mode
-- media: i2c: support os08a20 sensor driver
-- media: i2c: support sc5239 sensor driver
-- media: i2c: gc032a: set default stream off state
-- media: rockchip: ispp: reset at frame end
-- media: rockchip: ispp: frame buffer done early
-- media: rockchip: ispp: frame buffer done early
-- media: rockchip: isp: frame buffer done early
-- drm/rockchip: vop2: output error info when cluster use non afbc format
-- media: i2c: gc2375h: fix vblank set issue
-- misc: add driver for rk803.
-- media: i2c: add strobe control & fix expsoure for ov9281.
-- media: i2c: modify ov9281 driver for thunderboot.
-- drivers: rk_flash: set dma mask to 32bits
-- PCI: rockchip: fix subsys_irq_handler logic
-- arm64: dts: rockchip: rk3568: disable receiver detection in P3 for usb
-- drm/rockchip: vop: Deal with display area out of display mode
-- phy: rockchip: inno-usb2: support usb wakeup for rk3568
-- drm/rockchip/rk628: combtxphy: reducing DUAL LVDS power consumption
-- media: rockchip: ispp: fix bug that ispp register isn't included in SEI
-- mmc: sdhci-of-dwcmshc: Adjust DLL_TXCLK_TAPNUM_DEFAULT to 0x10
-- video/rockchip: rga2: Fix MMU base not shift forward.
-- video/rockchip: rga2: adapt to kernel 5.10
-- drivers: rkflash: Ajudst the dll strategy
-- drm/rockchip: vop2: enable dither up when input rgb565
-- drm/bridge: synopsys: dw-hdmi: Remove dw_hdmi_setup when atomic_check
-- media: rockchip: isp1: fix buf done state
-- ASoC: rockchip: rk817-codec: Solve pop problems
-- Revert "drm/rockchip: gem: fix dma_free_attrs() parameter error"
-- media: rockchip: isp/ispp: declare slab.h for kmalloc/kfree
-- media: rockchip: isp: dmarx support yuv format
-- media: videobuf2-v4l2: copy user image sequence for output video
-- media: rockchip: isp1: clean list when stream failed
-- arm64: dts: rockchip: rk356x-evb: fix pcie supply to regulator-fixed
-- ASoC: rockchip: i2s-tdm: Add support for 16ch tdm mode
-
-```
-
-## rk356x_linux_release_v1.1.2_20210720.xml Note
-
-**app**:
-
-```
-- update aiserver/mediaserver
-- add rkaiq_tool_server
-```
-
-**external**:
-
-```
-- update camera_engine_rkaiq
-	* - camera RKAIQ to V3.0
-	* - isp driver v1.0x6.1
-	* - new tuning tool v2.0.0
-	* - use json iq instead of xml
-	* - reconstruct HWI & aiq_core
-	* - HWI can produce SOF, STATS, RAW/YUV image
-	* - aiq core support algo running in group threads
-
-- update gstreamer-rockchip
-	* - rockchipmpp: Improve error logs
-	* - mppdec: Fix RGA convert error
-	* - mppenc: Support opaque RGB32 formats
-	* - mppenc: Support copying encoded packets
-	* - mppallocator: Fixup allocated memory size
-
-- update mpp
-	* - [hal_jpegd]: Fix hal jpeg RGB output byte stride
-	* - [drm]: Add DRM_CLOEXEC|DRM_RDWR flag on fd import
-	* - [jpegd]: Fix parse err that do not start with soi
-	* - [mpi/mpp]: Add mpp internal start / stop function
-	* - [mpp_dec]: Add more check on decoding mjpeg
-	* - [hal_h265d]: Fix rps update issue
-	* - [mpi_dec_test]: Allow loop jpeg decoding test
-	* - [mpp_buffer]: Fix crash on cleanup leaked buffer
-	* - [hal_jpege_vpu]: Fix qtable memory leak
-	* - [h264d_sps/pps]: Fix h264d err cause by spspps not update issue
-	* - [mpp_buffer]: Fix miss lock on searching group
-	* - [h264d_parse]: Fix prepare crash issue
-	* - [rc_v2]: Add bitrate statistic time cfg interface
-	* - [rc_v2]: Rename stat_times to stats_time
-	* - [mpp_buffer]: Fix error on releasing leaked buffer
-	* - [misc]: Add O_CLOEXEC flag on file open
-	* - [drm]: Fix drm handle issue
-
-- libmali
-	* - meson: Disable wrapper packages for utgard by default
-- linux-rga
-	* - Update version.
-	* - docs: rename docs/README.md -> docs/RGA_API_Instruction.md
-	* - docs: Add image in RGA_FAQ.md
-	* - Three-channel mode(A+B->C) supports configuration of CSC.
-	* - docs: Update RGA_FAQ.md
-	* - docs: Add RGA_FAQ.md
-	* - im2d_api: Update the supported RGA version number.
-	* - docs: Update description of imblend/imcomposite.
-	* - Use spaces for indentation.(code style)
-	* - Supplement detailed error information in imStrError().
-	* - Added translate_format_str().
-	* - im2d_api: Modify imErrorMsg() to imSetErrorMsg().
-	* - im2d_api: Add feature verify in imcheck().
-	* - im2d_api: rga_get_info() add some feature options.
-	* - Modify the version number of RGA2 to verify.
-	* - im2d_api: Reduce redundant ioctl for query RGA version.
-
-- update eq_drc_process/alsa-config/isp2-ipc/libglCompositor/rknpu/rkscript/uvc_app/uac_app/recovery/rockit
-
-```
-
-**Buildroot (2018.02-rc3)**:
-
-```
-- Fixes mpg123 noise bug
-- Support camera rkaiq v3.0
-- fixes rk356x 32bit issues
-- Add SW cursor in weston to fix the display issue
-- Support NV16 dma buf
-```
-
-**Debian10 (buster)**:
-
-```
-- packages: update xserver
-- libdrm-cursor: Update to 1.1.2
-- drm-hotplug.sh: Stop using sysfs mode
-- scripts: update some tools for debugging
-- rkscripts: add ntp for time sync server
-- overlay: remove the rc.local
-- scripts: update packages for xserver
-- overlay: rework for adb debugging
-- overlay-firmware: update rkwifibt firmware and tool
-- packages: update xserver to 1.20.4-debian10u3
-- overlay: xfce4: Disable blank-on-ac and screen lock by default
-- drm-hotplug.sh: Don't block uevent
-- overlay-debug: update glmark2 2021.02 to instead of the old style
-
-```
-
-**Kernel (4.19)**:
-
-```
-- ASoC: rockchip: i2s-tdm: Silence warning by adding parentheses
-- phy: rockchip-naneng-usb2: keep utmi clk on during charge detection
-- media: rockchip: isp: disable params when it stream off
-- media: rockchip: isp: add lock for isp stream
-- iommu: remove unused rk-iommu/iovmm driver
-- drivers: rkflash: Notice it when the storage device is not support
-- drm/rockchip: fix error return for rockchip_gem_prime_sgl_sync_range
-- drm/rockchip: drv: enable power before direct close crtc
-- video/rockchip: rga2: Add format support
-- drm/rockchip: vop2: Disable all other multi area when disable area0
-- drm/rockchip: vop2: fix hdr delay number setting when port_mux is not at last
-- drm/bridge: analogix_dp: Add HBR2 support for RK3399
-- drm/bridge: analogix_dp: Add support for SSC (Spread-Spectrum Clock)
-- clk: rockchip: rk3568: remove sclk_ddrc
-- arm64: dts: rockchip: rk3568: modify dmc clk
-- PM / devfreq: rockchip_dmc: rk3568: add rockchip_ddr_set_rate
-- arm64: dts: rockchip: rk356x: dmc: Replace system-status-freq by system-status-level
-- PM / devfreq: rockchip_dmc: rk3568: get available frequencies from ATF
-- dt-bindings: soc: rockchip: add dram frequency level support
-- drm/rocckhip: vop2: fix compile warning
-- drm/rockchip: vop2: rk356x three vp share one gamma
-- ASoC: rockchip: spdifrx: Replace dmaengine with rockchip pcm
-- ASoC: rockchip: spdif: Replace dmaengine with rockchip pcm
-- ASoC: rockchip: audio_pwm: Replace dmaengine with rockchip pcm
-- ASoC: rockchip: pdm: Replace dmaengine with rockchip pcm
-- ASoC: rockchip: i2s-tdm: Replace dmaengine with rockchip pcm
-- ASoC: rockchip: Make rockchip_pcm depends on SND_SOC_ROCKCHIP
-- soc: rockchip: rockchip_sip: add get dram frequency info support
-- media: i2c: gc02m2 fixes the base value of digital gain to avoid purple in the light
-- drm/rockchip: ebc_dev: release version v2.06
-- media: spi: ms41908: support focus/zoom reinit run simultaneously
-- ASoC: rockchip: i2s-tdm: Silence warning by adding parentheses
-- phy: rockchip-naneng-usb2: keep utmi clk on during charge detection
-- media: rockchip: isp: disable params when it stream off
-- media: rockchip: isp: add lock for isp stream
-- iommu: remove unused rk-iommu/iovmm driver
-- drivers: rkflash: Notice it when the storage device is not support
-- staging: android: ion: fix error return for ion_sgl_sync_range
-- drm/rockchip: fix error return for rockchip_gem_prime_sgl_sync_range
-- drm/rockchip: drv: enable power before direct close crtc
-- arm64: dts: rockchip: rk3566-eink: change dmc freq level
-- drm/rockchip: ebc_dev: release version v2.07
-- video/rockchip: rga2: Add format support
-- drm/rockchip: vop2: Disable all other multi area when disable area0
-- drm/rockchip: vop2: fix hdr delay number setting when port_mux is not at last
-- drm/bridge: analogix_dp: Add HBR2 support for RK3399
-- drm/bridge: analogix_dp: Add support for SSC (Spread-Spectrum Clock)
-- clk: rockchip: rk3568: remove sclk_ddrc
-- arm64: dts: rockchip: rk3568: modify dmc clk
-- PM / devfreq: rockchip_dmc: rk3568: add rockchip_ddr_set_rate
-- arm64: dts: rockchip: rk356x: dmc: Replace system-status-freq by system-status-level
-- PM / devfreq: rockchip_dmc: rk3568: get available frequencies from ATF
-- dt-bindings: soc: rockchip: add dram frequency level support
-- drm/rocckhip: vop2: fix compile warning
-- drm/rockchip: vop2: rk356x three vp share one gamma
-- ASoC: rockchip: spdifrx: Replace dmaengine with rockchip pcm
-- ASoC: rockchip: spdif: Replace dmaengine with rockchip pcm
-- ASoC: rockchip: audio_pwm: Replace dmaengine with rockchip pcm
-- ASoC: rockchip: pdm: Replace dmaengine with rockchip pcm
-- ASoC: rockchip: i2s-tdm: Replace dmaengine with rockchip pcm
-- ASoC: rockchip: Make rockchip_pcm depends on SND_SOC_ROCKCHIP
-- soc: rockchip: rockchip_sip: add get dram frequency info support
-- media: i2c: gc02m2 fixes the base value of digital gain to avoid purple in the light
-- media: spi: ms41908: support focus/zoom reinit run simultaneously
-- media: i2c: fp5501: set phase index to 0 after reinit zoom/focus
-- media: i2c: imx335: fixed short exposure calc err in DOL2 mode
-- drm/rockchip/rk628: max input resolution is 4k yuv420
-- arm64: dts: rockchip: rk3568: adjust opp-table
-- drm/rockchip: ebc_dev: release version v2.05
-- clk: rockchip: rk3568: add CLK_GATE_NO_SET_RATE flag for some clks
-- clk: rockchip: add flag CLK_GATE_NO_SET_RATE
-- video/rockchip: rga2: Modify blend formula
-- arm64/configs: update rockchip_linux_defconfig
-- media: rockchip: cif: remove dummy buffer
-- media: i2c: imx415: support get sony BRL
-- include: uapi/linux/rk-camera-module.h add RKMODULE_GET_SONY_BRL command
-- media: i2c: add driver for ov9281@30fps
-- rm/bridge: synopsys: dw-hdmi: add 1024x768p60 to default mode
-- drm/rockchip: add 1024x768p60 to default output mode
-- drm/bridge: analogix_dp: add default mode when get edid failed
-- media: i2c: ov8858 increase vts by add sensor PLL clk
-- drivers: rk_nand: zftl: fix unexpected gfp: 0x4 (GFP_DMA32) printf
-- media: add motor driver fp5501 for camera focus/zoom
-- serial: 8250_port: reset LSR DLAB before set MCR
-- soc: rockchip: opp_select: Export rockchip_nvmem_cell_read_u8/u16()
-- soc: rockchip: opp_select: Remove non-essential conditions for getting pvtm
-- usb: gadget: f_uac1: adds support for SS and SSP
-- usb: gadget: f_uac2: make compatible for windows os
-- UPSTREAM: usb: f_uac2: adds support for SS and SSP
-- media: spi: ms41908: zoom/focus use different reback value
-- arm64: configs: rockchip_defconfig: Enable rknpu module
-- driver: rknpu: Add rknpu driver for rk356x, version: 0.4.2
-- arm64: dts: rockchip: rk3568: rknpu: Add rknpu cru reset
-- arm64: dts: rockchip: rk3568: rknpu: Add new rknpu compatible with rk3568 target
-- arm64: dts: rockchip: rk3568: Set spi node to fall back point
-- PM / devfreq: rockchip-dfi: add support lpddr4x
-- arm64: dts: rockchip: rk3568: rename mipi_dphy to video_phy
-- phy/rockchip: inno-video-combo-phy: update for rk356x mipi_dphy
-- drm/rockchip: driver: fix sub_dev pointer error
-- drm/rockchip: analogix_dp: Add support for external bridge
-- input: touchscreen: cyttsp5: fix memory out of bounds write issue
-- drm/rockchip: cdn_dp: Fix link retrain condition
-- phy: rockchip-typec: Fix DP lane config
-- drm/bridge: dw-hdmi: fix rgb2yuv csc coeff
-- drm/rockchip: dw_hdmi: correct output bus format if unsupported_yuv_input
-- regulator: xz3216: update drivers to support vsel set
-- cpufreq: interactive: fix policy locking
-- mmc: dw_mmc-rockchip: Always fix ID mode clk request into 375KHz for RK356X
-- arm64: dts: rockchip: rk3568: modify rkvdec compatible
-- dt-bindings: video: mpp: add rk3568 codec properties
-- video: rockchip: mpp: Fix 3568 cabac/cavlc switch issue
-- mmc: sdhci-of-dwcmshc: rk3568: do not enable DLL while the clock rate less than 52mhz
-- regulator: xz3216: Fix gcc this statement may fall through warning
-- media: rockchip: isp: clear rdbk fifo at dmarx stop
-- media: rockchip: isp: clear rdbk fifo at dmarx stop
-- media: i2c: rk628csi: workround avi packet probabitity error
-- include: linux: rockchip: add share mem page type define
-- media: rockchip: fix isp and ispp share dmabuf release fail
-- f2fs: Avoid using empty extent_tree when look up extent cache
-- UPSTREAM: usb: dwc3: gadget: Remove FS bInterval_m1 limitation
-- drivers: rk_nand: set dma mask to 32bits
-- video: rockchip: mpp: Fix mpp_free_task crash
-- arm64: dts: rockchip: enable the suspend default config for rk3568-linux
-- drm/rockchip: vop2: No register mirror win when only one vp used
-- drm/rockchip: vop2: close cluster sub win when main win is closed
-- drm/rockchip: vop: Set output mode to P888 before send mcu cmd
-```
-
-**rkbin**:
-
-```
-- tool: ddrbin_tool: modify freq describe
-- rk3568: bl31 ultra: update version to v2.07
-- rk3568: bl31: update version to v1.28
-- rk3566: ddr: update ultra ddr bin to v1.08
-- rk3568: bl31: update version to v1.27
-- rk3568: bl31 ultra: update version to v2.06
-- rk3566: ddr: update ddr bin to v1.09
-- rk3568: ddr: update ddr bin to v1.09
-- rk356x: loader: update version to v1.10
-- rk3568: bl31: update version to v1.26
-- tool: ddrbin_tool: update to v1.07 20210603
-- rk3568/rk3566: spl: nand: update version to v1.07
-- tools: bmp2gray16: support eink power off logo
-- RKBOOT: rk3566: add RK3566MINIALL_NAND.ini for nand
-```
-
-## rk356x_linux_release_v1.1.1_20210618.xml Note
-
-**app**:
-
-```
-- remove the unused camera project
-```
-
-**external**:
-
-```
-- Remove the unused libdrm project
-- Switch isp2-ipc to rk356x_dev branch
-- gstreamer-rockchip: Update encoder size limits and buffer is allocated
-- update mpp
-```
-
-**Buildroot (2018.02-rc3)**:
-
-```
-- gst1-plugins-bad: waylandsink: Use create_immed to create dmabuf
-- Fix the UVC issues
-```
-
-**Debian10 (buster)**:
-
-```
-- overlay: add partition with by-name
-- overlay-debug: QT player with xvimagesink by default
-- packages: update some packages fixing issues
-- overlay-debug: Update modetest
-- Revert "overlay: drm-hotplug.sh: Fix DP hotplug error"
-- packages: update debs for the better compatible
-- overlay: update adbd and xterm environment
-```
-
-**Kernel (4.19)**:
-
-```
-- Fixes vop some bugs
-- Update rk356x-evb dts
-- Update isp
-```
-
-**rkbin**:
-
-```
-- rk356x: loader: update version to v1.09
-- rk3568: bl31 ultra: update version to v2.05
-- rk3568: bl31: update version to v1.25
-- rk3568: bl31: update version to v1.24
 ```
 
 ## rk356x_linux_release_v1.1.0_20210520.xml Note

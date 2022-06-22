@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-<project dest-branch="master" name="linux/bsp/internal_doc" path="docs/.Socs" revision="refs/tags/linux-4.19-gen-rkr2">
+<project dest-branch="master" name="linux/bsp/internal_doc" path="docs/.Socs" revision="refs/tags/linux-4.19-gen-rkr3">
     <linkfile dest="docs/RK356X" src="RK356X"/>
 </project>
-<project dest-branch="master" name="linux/bsp/docs" path="docs" revision="refs/tags/linux-4.19-gen-rkr2">
-    <linkfile dest="docs/.Socs/RK356X/Rockchip_RK3568_Reference_SATA_Performance_CN.pdf" src="Common/NVM/Rockchip_RK3568_Reference_SATA_Performance_CN.pdf"/>
-    <linkfile dest="docs/.Socs/RK356X/Rockchip_RK356X_Developer_Guide_SATA_CN.pdf" src="Common/NVM/Rockchip_RK356X_Developer_Guide_SATA_CN.pdf"/>
-    <linkfile dest="docs/.Socs/RK356X/Rockchip_RK356X_Developer_Guide_PCIe_CN.pdf" src="Common/PCIe/Rockchip_RK356X_Developer_Guide_PCIe_CN.pdf"/>
-    <linkfile dest="docs/.Socs/RK356X/Rockchip_RK356x_Developer_Guide_USB_CN.pdf" src="Common/USB/Rockchip_RK356x_Developer_Guide_USB_CN.pdf"/>
+<project dest-branch="master" name="linux/bsp/docs" path="docs" revision="refs/tags/linux-4.19-gen-rkr3">
     <linkfile dest="docs/.Socs/RK356X/Rockchip_Developer_Guide_Linux_Software_CN.pdf" src="Rockchip_Developer_Guide_Linux_Software_CN.pdf"/>
 </project>
 
