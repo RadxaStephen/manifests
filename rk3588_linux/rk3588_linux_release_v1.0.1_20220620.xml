@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="rk" fetch="ssh://git@www.rockchip.com.cn/linux/"/>
+  <default remote="rk" sync-j="4"/>
+
+  <include name="include/rk3588_doc.xml" />
+
+  <project name="android/rk/platform/system/rk_tee_user" path="external/security/rk_tee_user" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="android/rk/u-boot" path="u-boot" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/app-new/qfm" path="app/qfm" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/app/QLauncher" path="app/QLauncher" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/app/multivideoplayer" path="app/multivideoplayer" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/app/qcamera" path="app/qcamera" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/app/qplayer" path="app/qplayer" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/app/settings" path="app/qsetting" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/buildroot" path="buildroot" revision="refs/tags/linux-5.10-gen-rkr3.1" clone-depth="1">
+    <linkfile src="build/Makefile" dest="Makefile"/>
+    <linkfile src="build/envsetup.sh" dest="envsetup.sh"/>
+  </project>
+  <project name="linux/debian" path="debian" revision="refs/tags/linux-5.10-gen-rkr3.1" clone-depth="1"/>
+  <project name="linux/device/rockchip" path="device/rockchip" revision="refs/tags/linux-5.10-gen-rkr3.1">
+    <linkfile src="common/mkfirmware.sh" dest="mkfirmware.sh"/>
+    <linkfile src="common/build.sh" dest="build.sh"/>
+    <linkfile src="common/rkflash.sh" dest="rkflash.sh"/>
+    <linkfile src="rk3588" dest="device/rockchip/.target_product"/>
+  </project>
+  <project name="linux/drm-cursor" path="external/drm-cursor" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/external/alsa-config" path="external/alsa-config" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/external/avb" path="external/avb" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/external/camera_engine_rkaiq" path="external/camera_engine_rkaiq" revision="refs/tags/linux-5.10-gen-rkr3.1" clone-depth="1"/>
+  <project name="linux/external/chromium" path="external/chromium" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/external/libglCompositor" path="external/libglCompositor" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/external/rk_pcba_test" path="external/rk_pcba_test" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/external/rkscript" path="external/rkscript" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/external/rktoolkit" path="external/rktoolkit" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/external/rkupdate" path="external/rkupdate" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/external/rkwifibt" path="external/rkwifibt" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/external/rkwifibt-app" path="external/rkwifibt-app" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/gstreamer-rockchip" path="external/gstreamer-rockchip" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/libmali" path="external/libmali" revision="refs/tags/linux-5.10-gen-rkr3.1" clone-depth="1"/>
+  <project name="linux/linux-rga" path="external/linux-rga" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/recovery" path="external/recovery" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/rockchip-test" path="external/rockchip-test" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/security/bin" path="external/security/bin" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="linux/tools" path="tools" revision="refs/tags/linux-5.10-gen-rkr3.1" clone-depth="1">
+    <linkfile src="windows/RKDevTool/RKDevTool_Release/rk3588-config.cfg" dest="tools/windows/RKDevTool/RKDevTool_Release/config.cfg"/>
+    <linkfile src="windows/RKDevTool/rockdev/rk3588-package-file" dest="tools/windows/RKDevTool/rockdev/package-file"/>
+    <linkfile src="windows/RKDevTool/rockdev/rk3588-mkupdate.bat" dest="tools/windows/RKDevTool/rockdev/mkupdate.bat"/>
+    <linkfile src="linux/Linux_Pack_Firmware/rockdev/rk3588-mkupdate.sh" dest="tools/linux/Linux_Pack_Firmware/rockdev/mkupdate.sh"/>
+    <linkfile src="linux/Linux_Pack_Firmware/rockdev/rk3588-package-file" dest="tools/linux/Linux_Pack_Firmware/rockdev/package-file"/>
+  </project>
+  <project name="linux/xserver" path="external/xserver" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="rk/kernel" path="kernel" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="rk/mpp" path="external/mpp" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="rk/prebuilts/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="rk/prebuilts/gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf" path="prebuilts/gcc/linux-x86/arm/gcc-arm-10.3-2021.07-x86_64-arm-none-linux-gnueabihf" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="rk/rkbin" path="rkbin" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+  <project name="rk/rknn-toolkit2" path="external/rknn-toolkit2" revision="refs/tags/linux-5.10-gen-rkr3.1" clone-depth="1"/>
+  <project name="rk/rknpu2" path="external/rknpu2" revision="refs/tags/linux-5.10-gen-rkr3.1" clone-depth="1"/>
+  <project name="rk/uefi-monorepo" path="uefi" revision="refs/tags/linux-5.10-gen-rkr3.1"/>
+</manifest>

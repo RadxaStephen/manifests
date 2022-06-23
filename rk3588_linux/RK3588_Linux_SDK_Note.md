@@ -7,6 +7,16 @@
 [TOC]
 
 ---
+
+## rk3588_linux_release_v1.0.1_20220620.xml Note
+
+- Fixes Secureboot function issue
+- Fixes SD boot and upgrade issue
+- Update docs include secureboot,pinctrl,display,AVl and so on
+- Update kernel to fix some issues
+- Add RK3588M Socs to support
+- Add RK3588 evb7 to support single pmic hardware design
+
 ## rk3588_linux_release_v1.0.0_20220520.xml Note
 
 - Update all the projects with lastest
