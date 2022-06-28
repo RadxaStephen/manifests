@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-<project dest-branch="master" name="linux/bsp/internal_doc" path="docs/.Socs" revision="refs/tags/linux-4.4-gen-rkr1" clone-depth="1">
+<project name="linux/bsp/internal_doc" path="docs/.Socs" revision="refs/tags/linux-4.4-gen-rkr1" clone-depth="1">
     <linkfile dest="docs/RK3399" src="RK3399"/>
 </project>
-<project dest-branch="master" name="linux/bsp/docs" path="docs" revision="refs/tags/linux-4.4-gen-rkr1" clone-depth="1">
+<project name="linux/bsp/docs" path="docs" revision="refs/tags/linux-4.4-gen-rkr1" clone-depth="1">
     <linkfile dest="docs/.Socs/RK3399/Rockchip_RK3399_Developer_Guide_MCU_CN.pdf" src="Common/MCU/Rockchip_RK3399_Developer_Guide_MCU_CN.pdf"/>
     <linkfile dest="docs/.Socs/RK3399/Rockchip_RK3399_Developer_Guide_PCIe_CN.pdf" src="Common/PCIe/Rockchip_RK3399_Developer_Guide_PCIe_CN.pdf"/>
     <linkfile dest="docs/.Socs/RK3399/Rockchip_RK3399_Developer_Guide_USB_DTS_CN.pdf" src="Common/USB/Rockchip_RK3399_Developer_Guide_USB_DTS_CN.pdf"/>
