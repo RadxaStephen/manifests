@@ -7,6 +7,22 @@
 [TOC]
 
 ---
+## rv1126_rv1109_linux_ai_camera_v2.3.6_20220716.xml Note
+
+```
+一、App
+1. aiserver：rockx添加人形检测算法支持，修复uvc 1024x768显示比例问题等
+2. aiserver： 修复VO插件内存泄漏问题
+3. uvc app： 修复反复初始化和反初始化后内存泄漏问题
+4. uvc app： 支持gain控制，修复曝光、白平衡设置功能等，更新文档
+4. ispserver: 添加色温接口
+
+二、Buildroot
+1. 支持spi nor产品配置
+```
+
+
+
 ## rv1126_rv1109_linux_ai_camera_v2.3.1_20211026.xml Note
 
 ```
@@ -18,8 +34,6 @@
 二、Buildroot
 1. 更新dl目录，预置一些bsp包，避免下载耗时
 ```
-
-
 
 
 
