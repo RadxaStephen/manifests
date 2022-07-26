@@ -7,6 +7,15 @@
 [TOC]
 
 ---
+## rv1126_rv1109_linux_ai_camera_v2.3.7_20220726.xml Note
+
+```
+一、kernel & u-boot
+1. 添加GF版本RK817/RK809补丁
+```
+
+
+
 ## rv1126_rv1109_linux_ai_camera_v2.3.6_20220716.xml Note
 
 ```
