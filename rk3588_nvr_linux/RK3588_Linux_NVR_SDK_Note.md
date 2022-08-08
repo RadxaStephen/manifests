@@ -8,6 +8,35 @@
 
 ---
 
+## rk3588_linux_nvr_release_v1.3.0_20220805.xml Note
+
+| 序号 | 更新简要描述                                             | 详细描述                                                     | 备注     |
+| ---- | -------------------------------------------------------- | ------------------------------------------------------------ | -------- |
+| 1    | 修复U-Boot USB xHCI 控制器通信失败导致 U-Boot 卡住的问题 | 【问题描述】xHCI 控制器驱动传输失败时，引起U-Boot卡住<br/>【原因分析】1. xHCI驱动在处理传输异常时，可能会调用BUG()主动触发panic，导致U-Boot panic卡；<br/>2. xHCI驱动在prepare ring出错（EP_STATE_HALTED）时，会不断重复执行请求，尝试恢复，导致U-Boot卡在xHCI驱动中，无法进入Kernel<br/>【解决方法】xHCI驱动修复<br/>【主要修改文件】<br/>u-boot: drivers/usb/host/xhci-ring.c<br/>drivers/pinctrl/rockchip/pinctrl-rk3588.c | 必须更新 |
+| 2    | 修复uboot下pcie初始化概率异常问题                        | 【问题描述】uboot 初始化 PCIE PHY 过程 panic<br/>【原因分析】PHY 初始化流程有冗余重复部分<br/>【解决方法】处理该冗余重复部分<br/>【主要修改文件】<br/>u-boot: drivers/pci/pcie_dw_rockchip.c |          |
+| 3    | 修复HDMI音频异常无声音问题                               | 【问题描述】1. 先使能音频再使能HDMI，HDMI音频无声音<br/>2. 同时使能HDMI和音频，HDMI音频无声音<br/>3. 先使能HDMI，延时200ms后再使能音频，HDMI音频有声音<br/>【原因分析】HDMI音频需要等HDMI使能并且初始化流程走完再操作<br/>【解决方法】等待HDMI初始化完成，否则返回失败<br/>【主要修改文件】<br/>kernel: drivers/gpu/drm/bridge/synopsys/dw-hdmi-qp-i2s-audio.c | 必须更新 |
+| 4    | 优化HDMI PHY信号                                         | 【问题描述】不涉及 <br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/phy/rockchip/phy-rockchip-samsung-hdptx-hdmi.c | 必须更新 |
+| 5    | HDMI使用软件traing方式，优化8k热拔插识别兼容性           | 【问题描述】8K热拔插场景接一些电视如长虹，概率出现不显示或显示异常问题，出现edid读取失败 <br/>【原因分析】信号问题<br/>【解决方法】改成软件方式traing，走协议流程<br/>【主要修改文件】<br/>kernel: drivers/gpu/drm/bridge/synopsys/dw-hdmi-qp.c | 必须更新 |
+| 6    | HDMI驱动更新，优化HDMI兼容性                             | 【问题描述】不涉及<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/gpu/drm/bridge/synopsys/<br/>arch/arm64/boot/dts/rockchip/rk3588s-pinctrl.dtsi<br/>u-boot: drivers/video/drm/<br/>common/edid.c | 必须更新 |
+| 7    | EVB板型默认打开dp0音频支持，vp3 clk使用aupll             | 【问题描述】evb板型不支持dp声卡，vp3显示clk多屏显示下不足<br/>【原因分析】evb板型dp声卡配置未打开，vp3显示clk多屏显示下不足<br/>【解决方法】dts配置打开dp0声音配置，vp3 clk使用aupll<br/>【主要修改文件】<br/>kernel: arch/arm64/boot/dts/rockchip/ | 必须更新 |
+| 8    | DMA驱动更新，修复局部刷新接口问题                        | 【问题描述】dma驱动更新，修复局部刷新接口问题<br/>【原因分析】新增使用场景等未适配<br/>【解决方法】添加驱动更新支持<br/>【主要修改文件】<br/>kernel: drivers/dma-buf/heaps/ | 必须更新 |
+| 9    | 修复概率reboot异常                                       | 【问题描述】pcie驱动更新支持debugfs后，个别机器出出现开机异常<br/>【原因分析】开机pcie的mem出现了不正常的自动上电，导致开启pd的上电时序异常，pd开启不成功<br/>【解决方法】对mem的供电进行手动复位<br/>【主要修改文件】<br/>rkbin: bin/rk35/rk3588_bl31_v1.22.elf<br/>kernel: drivers/soc/rockchip/pm_domains.c | 必须更新 |
+| 10   | 多媒体MPI版本更新到V1.7.1                                | 【问题描述】多媒体MPI版本更新到V1.7.1<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>build/app/RKMPI_Release/ | 必须更新 |
+| 11   | 修复使用logo分区开机bmp图片panic问题                     | 【问题描述】开机时uboot判断有logo分区且有图片场景出现panic异常<br/>【原因分析】resource_img中删除dtbs list操作的处理引入<br/>【解决方法】添加dtbs list的初始化，避免使用logo分区情况下删除操作导致panic<br/>【主要修改文件】<br/>u-boot: arch/arm/mach-rockchip/resource_img.c | 必须更新 |
+| 12   | 修复强制输出分辨率设置1080p内核阶段显示异常问题          | 【问题描述】强制输出分辨率设置1080p内核阶段显示异常<br/>【原因分析】edid未读取到情况下驱动配置限制1024x768导致<br/>【解决方法】驱动限制修改支持到4096x4096<br/>【主要修改文件】<br/>kernel: drivers/gpu/drm/rockchip/rockchip_drm_logo.c |          |
+| 13   | HDMI RX驱动相关更新最新，修复HDMI-IN兼容性等问题         | 【问题描述】不涉及<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/media/platform/rockchip/hdmirx/<br/> | 必须更新 |
+| 14   | IT6161驱动更新，修复mipi2hdmi 720p等概率无输出问题       | 【问题描述】mipi2hdmi 720p等概率无输出问题<br/>【原因分析】IT6161驱动问题<br/>【解决方法】更新驱动规避<br/>【主要修改文件】<br/>kernel/: drivers/gpu/drm/bridge/ite-it6161.c<br/> | 必须更新 |
+| 15   | GPU驱动更新                                              | 【问题描述】gpu驱动更新到最新g12p0-01eac0版本<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/gpu/arm/bifrost/<br/>build: rootfs.tar.gz | 必须更新 |
+| 16   | RGA3驱动更新                                             | 【问题描述】rga3驱动更新到V1.2.15<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/video/rockchip/rga3/ | 必须更新 |
+| 17   | USB驱动更新，修复type-c转dp设备兼容等问题                | 【问题描述】USB驱动更新<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/usb/<br/>drivers/phy/rockchip/phy-rockchip-inno-usb2.c<br/>drivers/phy/rockchip/phy-rockchip-inno-usb3.c | 必须更新 |
+| 18   | PCIE驱动更新，支持debugfs                                | 【问题描述】PCIE驱动更新，支持debugfs<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/pci/ | 必须更新 |
+| 19   | 更新CIF、ISP驱动                                         | 【问题描述】更新cif、isp驱动到最新v1.9.0，支持摄像头vi功能<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/media/platform/rockchip/cif/<br/>drivers/media/platform/rockchip/isp/ | 必须更新 |
+| 20   | 同步拼接相关补丁合并                                     | 【问题描述】同步拼接方案补丁合并<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/clk/rockchip/<br/>arch/arm64/configs/rk3588_nvr.config<br/>u-boot: drivers/clk/rockchip/clk_rk3588.c | 必须更新 |
+| 21   | NPU驱动更新,修复泄漏问题                                 | 【问题描述】驱动更新到V0.7.2-20220714<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/rknpu/ | 必须更新 |
+| 22   | DDR更新到V1.09，提升兼容性，提升带宽利用率               | 【问题描述】ddr更新V1.09<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>rkbin: bin/rk35/rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.09.bin | 必须更新 |
+| 23   | EVB添加dp0和spdif0声卡配置                               | 【问题描述】EVB添加dp0和spdif0声卡配置<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: arch/arm64/boot/dts/rockchip/ | 必须更新 |
+| 24   | 修复NVR多声卡同时输出情况下，某个声卡概率断音问题        | 【问题描述】NVR多声卡同时输出情况下，某个声卡概率断音问题<br/>【原因分析】驱动判断错误<br/>【解决方法】驱动修复<br/>【主要修改文件】<br/>kernel: sound/core/pcm_dmaengine.c | 必须更新 |
+
 ## rk3588_linux_nvr_release_v1.2.0_20220610.xml Note
 
 | 序号 | 更新简要描述                                     | 详细描述                                                     | 备注     |
