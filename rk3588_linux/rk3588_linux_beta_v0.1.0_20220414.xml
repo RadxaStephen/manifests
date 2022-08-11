@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="rk" fetch="ssh://git@www.rockchip.com.cn/linux/"/>
+  <remote name="rk" fetch="../../"/>
   <default remote="rk" sync-j="4"/>
 
   <include name="include/rk3588_doc.xml" />

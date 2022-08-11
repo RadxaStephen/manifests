@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="ssh://git@www.rockchip.com.cn/linux/" name="rk"/>
+  <remote fetch="../../" name="rk"/>
 
   <default remote="rk" sync-j="4"/>
   <include name="include/rk356x_doc.xml" />
