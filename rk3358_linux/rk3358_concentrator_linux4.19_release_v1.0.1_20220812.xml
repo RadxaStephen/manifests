@@ -31,7 +31,7 @@
     <linkfile src="linux/Linux_Pack_Firmware/rockdev/rk3358-mkupdate.sh" dest="tools/linux/Linux_Pack_Firmware/rockdev/mkupdate.sh"/>
     <linkfile src="linux/Linux_Pack_Firmware/rockdev/rk3358-package-file" dest="tools/linux/Linux_Pack_Firmware/rockdev/package-file"/>
   </project>
-  <project name="rk/kernel" path="kernel" revision="b20ef6354fb18fc7b60fb60ce94f965cbcd459d7" upstream="stable-4.19-concentrator"/>
+  <project name="rk/kernel" path="kernel" revision="56771ca1e3de8f258c8f72aec3c8583e08383a6a" upstream="stable-4.19-concentrator"/>
   <project name="rk/prebuilts/gcc-buildroot-9.3.0-2020.03-x86_64_aarch64-rockchip-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-buildroot-9.3.0-2020.03-x86_64_aarch64-rockchip-linux-gnu" revision="refs/tags/linux-4.19-gen-rkr3"/>
   <project name="rk/prebuilts/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" revision="refs/tags/linux-4.19-gen-rkr3"/>
   <project name="rk/prebuilts/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf" path="prebuilts/gcc/linux-x86/arm/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf" revision="refs/tags/linux-4.19-gen-rkr3"/>
