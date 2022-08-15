@@ -6,7 +6,6 @@
   
   <include name="include/rk3358_doc.xml" />
 
-  <project name="android/rk/platform/system/rk_tee_user" path="external/security/rk_tee_user" revision="refs/tags/linux-4.19-gen-rkr3"/>
   <project name="android/rk/u-boot" path="u-boot" revision="3b38d4374ace2cc4da6faa343de8f67c81884228" upstream="stable-4.19-concentrator"/>
   <project name="linux/buildroot" path="buildroot" revision="d57e7241e06881b0dcb91e19e0bda79020b7c1fc" upstream="stable-4.19-concentrator">
     <linkfile src="build/Makefile" dest="Makefile"/>
@@ -18,12 +17,8 @@
     <linkfile src="common/rkflash.sh" dest="rkflash.sh"/>
     <linkfile src="rk3358" dest="device/rockchip/.target_product"/>
   </project>
-  <project name="linux/external/app" path="external/app" revision="refs/tags/linux-4.19-gen-rkr3"/>
-  <project name="linux/external/rk_pcba_test" path="external/rk_pcba_test" revision="refs/tags/linux-4.19-gen-rkr3"/>
   <project name="linux/external/rkscript" path="external/rkscript" revision="refs/tags/linux-4.19-gen-rkr3"/>
   <project name="linux/external/rktoolkit" path="external/rktoolkit" revision="refs/tags/linux-4.19-gen-rkr3"/>
-  <project name="linux/external/update_engine" path="external/update_engine" revision="refs/tags/linux-4.19-gen-rkr3"/>
-  <project name="linux/recovery" path="external/recovery" revision="refs/tags/linux-4.19-gen-rkr3"/>
   <project name="linux/tools" path="tools" revision="76147330d5f681fa112672a5c8a9b5cd866519d3" upstream="stable-4.19-concentrator" clone-depth="1">
     <linkfile src="windows/RKDevTool/RKDevTool_Release/rk3358-config.cfg" dest="tools/windows/RKDevTool/RKDevTool_Release/config.cfg"/>
     <linkfile src="windows/RKDevTool/rockdev/rk3358-package-file" dest="tools/windows/RKDevTool/rockdev/package-file"/>
