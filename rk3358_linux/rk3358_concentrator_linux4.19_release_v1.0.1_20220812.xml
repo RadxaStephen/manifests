@@ -7,12 +7,12 @@
   <include name="include/rk3358_doc.xml" />
 
   <project name="android/rk/platform/system/rk_tee_user" path="external/security/rk_tee_user" revision="refs/tags/linux-4.19-gen-rkr3"/>
-  <project name="android/rk/u-boot" path="u-boot" revision="b63d150bfa1e64b3e0c51c2e58b90fcdf91315c1" upstream="stable-4.19-concentrator"/>
-  <project name="linux/buildroot" path="buildroot" revision="207eb0bd3a4206e3a651c5d3ac81d69a3044d90e" upstream="stable-4.19-concentrator">
+  <project name="android/rk/u-boot" path="u-boot" revision="3b38d4374ace2cc4da6faa343de8f67c81884228" upstream="stable-4.19-concentrator"/>
+  <project name="linux/buildroot" path="buildroot" revision="d57e7241e06881b0dcb91e19e0bda79020b7c1fc" upstream="stable-4.19-concentrator">
     <linkfile src="build/Makefile" dest="Makefile"/>
     <linkfile src="build/envsetup.sh" dest="envsetup.sh"/>
   </project>
-  <project name="linux/device/rockchip" path="device/rockchip" revision="5c35922a7fe29a49ebf70b3d06047f48fa683fdb" upstream="stable-4.19-concentrator">
+  <project name="linux/device/rockchip" path="device/rockchip" revision="73bb7113e1e7bccabeee6ff2b3b8f508b5a3df0b" upstream="stable-4.19-concentrator">
     <linkfile src="common/mkfirmware.sh" dest="mkfirmware.sh"/>
     <linkfile src="common/build.sh" dest="build.sh"/>
     <linkfile src="common/rkflash.sh" dest="rkflash.sh"/>
@@ -31,9 +31,9 @@
     <linkfile src="linux/Linux_Pack_Firmware/rockdev/rk3358-mkupdate.sh" dest="tools/linux/Linux_Pack_Firmware/rockdev/mkupdate.sh"/>
     <linkfile src="linux/Linux_Pack_Firmware/rockdev/rk3358-package-file" dest="tools/linux/Linux_Pack_Firmware/rockdev/package-file"/>
   </project>
-  <project name="rk/kernel" path="kernel" revision="56771ca1e3de8f258c8f72aec3c8583e08383a6a" upstream="stable-4.19-concentrator"/>
+  <project name="rk/kernel" path="kernel" revision="735766b27c3b9957a720c96266d4960e43759585" upstream="stable-4.19-concentrator"/>
   <project name="rk/prebuilts/gcc-buildroot-9.3.0-2020.03-x86_64_aarch64-rockchip-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-buildroot-9.3.0-2020.03-x86_64_aarch64-rockchip-linux-gnu" revision="refs/tags/linux-4.19-gen-rkr3"/>
   <project name="rk/prebuilts/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" path="prebuilts/gcc/linux-x86/aarch64/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu" revision="refs/tags/linux-4.19-gen-rkr3"/>
   <project name="rk/prebuilts/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf" path="prebuilts/gcc/linux-x86/arm/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf" revision="refs/tags/linux-4.19-gen-rkr3"/>
-  <project name="rk/rkbin" path="rkbin" revision="a372496bfc133839ab9d940d1f577dd0b89a3fc8" upstream="stable-4.19-concentrator"/>
+  <project name="rk/rkbin" path="rkbin" revision="236bb798f24d6f85156cb728b75162a1471d0ccc" upstream="stable-4.19-concentrator"/>
 </manifest>
