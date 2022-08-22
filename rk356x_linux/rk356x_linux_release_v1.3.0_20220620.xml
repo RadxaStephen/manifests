@@ -61,7 +61,7 @@
   <project name="linux/libmali" path="external/libmali" revision="refs/tags/linux-4.19-gen-rkr3" clone-depth="1"/>
   <project name="linux/linux-rga" path="external/linux-rga" revision="refs/tags/linux-4.19-gen-rkr3"/>
   <project name="linux/recovery" path="external/recovery" revision="refs/tags/linux-4.19-gen-rkr3"/>
-  <project name="linux/rockit" path="external/rockit" revision="refs/tags/linux-4.19-gen-rkr3"/>
+  <project name="linux/rockit" path="external/rockit" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
   <project name="linux/security/bin" path="external/security/bin" revision="refs/tags/linux-4.19-gen-rkr3"/>
   <project name="linux/tools" path="tools" revision="37d2355d3e5b38d62ddb33a3ebcd5f95c197024f" upstream="master">
     <linkfile src="windows/RKDevTool/RKDevTool_Release/rk356x-config.cfg" dest="tools/windows/RKDevTool/RKDevTool_Release/config.cfg"/>
