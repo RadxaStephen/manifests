@@ -8,6 +8,25 @@
 
 ---
 
+## rk3588_linux_release_v1.0.2_20220820.xml Note
+
+- Remove libglCompositor/avb repositories
+- Add rockit/librkcrypto repositories
+- Fix a few download/extract errors
+- Upgrade Weston version to 10.0.1 and improve its stability
+- Add support for buildroot X11 related functions
+- Add support for Linux enlightment Wayland desktop
+- Upgrade kernel to 5.10.110
+- Update the chromium browser version of Debian to R101
+- Update Linux_Upgrade_Tool, RKDevTool and SDDiskTool
+- Improve HDMI compatibility and HDMI-IN stability
+- Upgrade GStreamer of builderroot to 1.20.3 to improve audio and video compatibility
+- Add gamma support for xserver and fix the problem of multi touch
+- Update loader to improve chip stability
+- Update NPU and fix memory leakage
+- Update MPP to improve compatibility
+- Update docs
+
 ## rk3588_linux_release_v1.0.1_20220620.xml Note
 
 - Fixes Secureboot function issue
