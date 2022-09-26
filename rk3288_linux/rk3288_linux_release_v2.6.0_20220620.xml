@@ -4,7 +4,7 @@
 
   <default remote="rk" sync-j="4"/>
 
-  <include name="include/yocto.xml" />
+  <include name="common/yocto.xml" />
   <include name="include/rk3288_doc.xml" />
 
   <project name="android/rk/platform/system/rk_tee_user" path="external/security/rk_tee_user" revision="refs/tags/linux-4.4-gen-rkr1"/>

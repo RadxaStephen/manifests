@@ -4,7 +4,7 @@
 
   <default remote="rk" sync-j="4"/>
 
-  <include name="include/yocto.xml" />
+  <include name="common/yocto.xml" />
   <include name="include/rk356x_doc.xml" />
 
   <project dest-branch="rk33/mid/8.1/develop" name="android/RKNPUTool" path="external/RKNPUTools" revision="b8c0e77c1a5c8e886c3ebf3483557e8755485e6e" upstream="rk33/mid/8.1/develop"/>

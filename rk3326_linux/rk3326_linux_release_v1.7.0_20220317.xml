@@ -4,7 +4,7 @@
 
   <default remote="rk" sync-j="4"/>
 
-  <include name="include/yocto.xml" />
+  <include name="common/yocto.xml" />
   <include name="include/rk3326_doc.xml" />
 
   <project dest-branch="develop-next" name="android/rk/platform/system/rk_tee_user" path="external/security/rk_tee_user" revision="a566557d5f695f79ce0a5adb31749d1cc1d9052d" upstream="develop-next"/>

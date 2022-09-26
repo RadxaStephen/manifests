@@ -4,7 +4,7 @@
 
   <default remote="rk" sync-j="4"/>
 
-  <include name="include/yocto.xml" />
+  <include name="common/yocto.xml" />
 
   <project dest-branch="rk33/mid/9.0/develop" name="android/platform/external/libdrm" path="external/libdrm" revision="6b4258541a585426b128a365be89c11a1c363e02" upstream="rk33/mid/9.0/develop"/>
   <project dest-branch="develop-next" name="android/rk/platform/system/rk_tee_user" path="external/security/rk_tee_user" revision="fb8d1b867822903291c9a5de9289844df2f8f598" upstream="develop-next"/>
