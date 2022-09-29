@@ -4,7 +4,7 @@
   <remote name="rk" fetch="../../"/>
   <default remote="rk" sync-j="4"/>
 
-  <include name="include/px30_doc.xml" />
+  <include name="include/px30_5.10_doc.xml" />
   <include name="common/linux5.10.xml" />
 
   <project name="linux/device/rockchip" path="device/rockchip" revision="refs/tags/linux-5.10-gen-rkr3.3">

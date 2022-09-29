@@ -2,10 +2,10 @@
 <manifest>
 
 <project name="linux/bsp/internal_doc" path="docs/.Socs" revision="refs/tags/linux-5.10-gen-rkr3.3" clone-depth="1">
-    <linkfile dest="docs/RK3308" src="RK3308"/>
+    <linkfile dest="docs/PX30" src="PX30"/>
 </project>
 <project name="linux/bsp/docs" path="docs" revision="refs/tags/linux-5.10-gen-rkr3.3" clone-depth="1">
-    <linkfile dest="docs/.Socs/RK3308/Rockchip_Developer_Guide_Linux_Software_CN.pdf" src="Rockchip_Developer_Guide_Linux_Software_CN.pdf"/>
+    <linkfile dest="docs/.Socs/PX30/Rockchip_Developer_Guide_Linux_Software_CN.pdf" src="Rockchip_Developer_Guide_Linux_Software_CN.pdf"/>
 </project>
 
 </manifest>

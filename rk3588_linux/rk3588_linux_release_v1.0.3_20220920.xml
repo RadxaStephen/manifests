@@ -6,7 +6,6 @@
 
   <include name="include/rk3588_doc.xml" />
   <include name="common/linux5.10.xml" />
-  <include name="common/yocto_4.1.xml" />
 
   <project name="linux/device/rockchip" path="device/rockchip" revision="refs/tags/linux-5.10-gen-rkr3.3">
     <linkfile src="common/mkfirmware.sh" dest="mkfirmware.sh"/>
