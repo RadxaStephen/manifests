@@ -8,8 +8,8 @@
 
 ---
 
-## rk3308_linux_alpha_v0.0.1_20220820.xml Note
+## rk3308_linux5.10_release_v1.0.0_20220920.xml Note
 
 ```
-- The first alpha version
+- The first release version
 ```

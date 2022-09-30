@@ -7,6 +7,18 @@
 [TOC]
 
 ---
+## rk3588_linux_release_v1.0.3_20220920.xml Note
+
+- Upgrade bifrost DDK from g12p0-01eac0 to g13p0-01eac0
+- Upgrade NPU verison to V1.4.0
+- Refactor rkwifibt code
+- Update Weston to support to set cursor size and launchers
+- Add pm-utils for PowerManager
+- Use chromium R88 by default
+- Update some packages to buildroot upstream version
+- Update Linux_Upgrade_Tool to v2.17
+- Update UEFI
+- Update audio/crypto/sata/PCIe/usb/rockit/gstreamer/rga... docs
 
 ## rk3588_linux_release_v1.0.2_20220820.xml Note
 
