@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="../../" name="rk"/>
+  
+  <default remote="rk" sync-j="4"/>
+  
+  <project name="android/rk/u-boot" path="u-boot" revision="37384cd9d496d896aaa9265a307ab8dca88e3707" upstream="rk3588-nvr"/>
+  <project name="linux/bsp/docs" path="docs" revision="18365f5aa816c3c8f1e8a4d0111cf3ebc2a88dc9" upstream="master"/>
+  <project name="linux/build" path="build" revision="ff39d950067320546733bde06f534d7a8e9f0119" upstream="rk3588_nvr_linux_lite">
+    <linkfile dest="build_emmc.sh" src="tools/build_emmc.sh"/>
+    <linkfile dest="build_spi_nand.sh" src="tools/build_spi_nand.sh"/>
+    <linkfile dest="mkfirmware.sh" src="tools/mkfirmware.sh"/>
+  </project>
+  <project name="linux/internal_doc" path="docs/.Socs" revision="f180f9237164462b2e7272496104ce2f019605c1" upstream="master">
+    <linkfile dest="docs/RK3588" src="RK3588"/>
+  </project>
+  <project name="linux/tools" path="tools" revision="9a1fe1e4655d6061466b8eeb117e448db1b7681f" upstream="master">
+    <linkfile dest="tools/windows/RKDevTool/RKDevTool_Release/config.cfg" src="windows/RKDevTool/RKDevTool_Release/rk356x-config.cfg"/>
+    <linkfile dest="tools/windows/RKDevTool/rockdev/package-file" src="windows/RKDevTool/rockdev/rk3588-package-file"/>
+    <linkfile dest="tools/windows/RKDevTool/rockdev/mkupdate.bat" src="windows/RKDevTool/rockdev/rk3588-mkupdate.bat"/>
+    <linkfile dest="tools/linux/Linux_Pack_Firmware/rockdev/mkupdate.sh" src="linux/Linux_Pack_Firmware/rockdev/rk3588-mkupdate.sh"/>
+    <linkfile dest="tools/linux/Linux_Pack_Firmware/rockdev/package-file" src="linux/Linux_Pack_Firmware/rockdev/rk3588-package-file"/>
+  </project>
+  <project name="rk/kernel" path="kernel" revision="c70366baec4a13ff049b49020cdd200941558db2" upstream="develop-5.10-nvr-rk3588"/>
+  <project name="rk/rkbin" path="rkbin" revision="19c5bafe76496fbf864ba4a0cc414e3098c81325" upstream="rk3588-nvr"/>
+</manifest>

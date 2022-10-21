@@ -8,6 +8,30 @@
 
 ---
 
+## rk3588_linux_nvr_release_v1.4.0_20221021.xml Note
+
+| 序号 | 更新简要描述                                       | 详细描述                                                     | 备注     |
+| ---- | -------------------------------------------------- | ------------------------------------------------------------ | -------- |
+| 1    | 更新显示驱动到最新，修复HDMI兼容性及8K问题等       | 【问题描述】显示驱动更新最新<br/>【原因分析】不涉及<br/>【解决方法】显示驱动更新<br/>【主要修改文件】<br/>u-boot: drivers/video/drm/<br/>kernel: drivers/gpu/drm | 必须更新 |
+| 2    | 更新HDMIRX驱动到最新，修复部分HDMI-IN兼容问题      | 【问题描述】更新HDMIRX驱动到最新<br/>【原因分析】不涉及<br/>【解决方法】HDMIRX驱动更新<br/>【主要修改文件】<br/>kernel: drivers/media/platform/rockchip/hdmirx | 必须更新 |
+| 3    | GPU驱动及固件更新到g13版本                         | 【问题描述】GPU驱动及固件更新到g13版本 <br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/gpu/arm/bifrost/<br/>build: rootfs.tar.gz(rootfs/lib/firmware/mali_csffw.bin) | 必须更新 |
+| 4    | UBOOT更新，支持一些新特性，如双存储， 支持sata启动 | 【问题描述】UBOOT更新，支持一些新特性，如双存储， 支持sata启动 <br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>uboot: configs/rk3588-sata.config<br/>drivers/spi<br/>scripts/ | 必须更新 |
+| 5    | RGA3驱动更新                                       | 【问题描述】rga3驱动更新到V1.2.18<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/video/rockchip/rga3/ | 必须更新 |
+| 6    | NPU驱动更新                                        | 【问题描述】驱动更新到V0.8.2<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/rknpu/ | 必须更新 |
+| 7    | SPI NAND驱动更新到最新，兼容更多颗粒               | 【问题描述】SPI NAND驱动更新<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/mtd/nand/spi/ | 必须更新 |
+| 8    | DMA驱动更新，修复局部刷新接口问题                  | 【问题描述】dma驱动更新，修复局部刷新接口问题<br/>【原因分析】新增使用场景等未适配<br/>【解决方法】添加驱动更新支持<br/>【主要修改文件】<br/>kernel: drivers/dma-buf/heaps/ | 必须更新 |
+| 9    | 修复概率REBOOT异常                                 | 【问题描述】个别机器出现开机EMMC识别异常<br/>【原因分析】uboot阶段驱动识别容量得到错误结果<br/>【解决方法】添加retry机制修复<br/>【主要修改文件】<br/>uboot: drivers/mmc/mmc.c | 必须更新 |
+| 10   | 添加UAC功能支持                                    | 【问题描述】需要支持UAC功能<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>build： app/RKMPI_Release/<br/>kernel： arch/arm64/configs/rockchip_linux_defconfig<br/>include/linux/usb/ | 必须更新 |
+| 11   | MPP驱动更新到最新，修复JPEG概率花屏问题等          | 【问题描述】JPEG概率花屏问题<br/>【原因分析】MPP驱动问题<br/>【解决方法】更新驱动修复<br/>【主要修改文件】<br/>kernel: drivers/video/rockchip/mpp/ | 必须更新 |
+| 12   | BL31版本更新，支持待机唤醒功能、优化稳定性         | 【问题描述】BL31版本更新，支持待机唤醒共功能、优化稳定性<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>rkbin: bin/rk35/rk3588_bl31_v1.28.elf | 必须更新 |
+| 13   | DDRBIN_TOOL版本更新                                | 【问题描述】ddrbin_tool版本更新到v1.11<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>rkbin: tools/ddrbin * | 必须更新 |
+| 14   | 支持DP热拔插软件功能                               | 【问题描述】支持DP热拔插软件功能<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/gpu/drm/rockchip/dw-dp.c<br/>build: app/RKMPI_Release/ | 必须更新 |
+| 15   | SATA、PCI PHY驱动更新                              | 【问题描述】更新驱动版本<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/phy/rockchip/phy-rockchip-naneng-combphy.c | 必须更新 |
+| 16   | USB驱动更新，修复个别U3口U盘无法读取问题等         | 【问题描述】USB驱动更新<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/usb/<br/>drivers/phy/rockchip/phy-rockchip-inno-usb2.c<br/>drivers/phy/rockchip/phy-rockchip-inno-usb3.c | 必须更新 |
+| 17   | 多媒体MPI版本更新到V1.8.2                          | 【问题描述】多媒体MPI版本更新到V1.8.2<br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>build: app/RKMPI_Release/ | 必须更新 |
+| 18   | 修复CIF丢buff问题                                  | 【问题描述】vi一次还多个buffer，cif丢buffer的问题<br/>【原因分析】cif驱动处理不对<br/>【解决方法】驱动更新修复还多个buff情况<br/>【主要修改文件】<br/>kernel: drivers/media/platform/rockchip/cif | 必须更新 |
+|      |                                                    |                                                              |          |
+
 ## rk3588_linux_nvr_release_v1.3.0_20220805.xml Note
 
 | 序号 | 更新简要描述                                             | 详细描述                                                     | 备注     |
