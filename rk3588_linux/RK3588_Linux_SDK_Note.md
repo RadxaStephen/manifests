@@ -7,6 +7,17 @@
 [TOC]
 
 ---
+## rk3588_linux_release_v1.0.4_20221020.xml Note
+
+- Fix the xserver cause memory leak in Mali
+- Fix phy reset during power on for rk3588
+- Supoort Gstreamer NV12 10bit
+- Update rkscripts to rework the usbdevice/resize
+- Support the bootanim on bootup
+- Fix weston crash when hotplugging screens
+- Fix Gstreamer random hang when EOS
+- Update rockchip-test tests
+
 ## rk3588_linux_release_v1.0.3_20220920.xml Note
 
 - Upgrade bifrost DDK from g12p0-01eac0 to g13p0-01eac0
