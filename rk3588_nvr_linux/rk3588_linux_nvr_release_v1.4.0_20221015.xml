@@ -6,7 +6,7 @@
   
   <project name="android/rk/u-boot" path="u-boot" revision="37384cd9d496d896aaa9265a307ab8dca88e3707" upstream="rk3588-nvr"/>
   <project name="linux/bsp/docs" path="docs" revision="18365f5aa816c3c8f1e8a4d0111cf3ebc2a88dc9" upstream="master"/>
-  <project name="linux/build" path="build" revision="ff39d950067320546733bde06f534d7a8e9f0119" upstream="rk3588_nvr_linux_lite">
+  <project name="linux/build" path="build" revision="c41f8a83414116f4ab092a93c2668d634e575af4" upstream="rk3588_nvr_linux_lite">
     <linkfile dest="build_emmc.sh" src="tools/build_emmc.sh"/>
     <linkfile dest="build_spi_nand.sh" src="tools/build_spi_nand.sh"/>
     <linkfile dest="mkfirmware.sh" src="tools/mkfirmware.sh"/>
