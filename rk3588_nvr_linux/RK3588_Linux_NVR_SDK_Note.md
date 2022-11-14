@@ -8,6 +8,17 @@
 
 ---
 
+## rk3588_linux_nvr_release_v1.4.1_20221114.xml Note
+
+| 序号 | 更新简要描述                              | 详细描述                                                     | 备注     |
+| ---- | ----------------------------------------- | ------------------------------------------------------------ | -------- |
+| 1    | MPP驱动更新，修复泄露问题                 | 【问题描述】特定场景MPP驱动内存泄漏问题<br/>【原因分析】驱动问题<br/>【解决方法】驱动更新修复<br/>【主要修改文件】<br/>kernel: drivers/video/rockchip/mpp/mpp_iommu.c | 必须更新 |
+| 2    | 更新STMMAC驱动，修复部分兼容问题          | 【问题描述】更新STMMAC驱动<br/>【原因分析】不涉及<br/>【解决方法】STMMAC驱动更新<br/>【主要修改文件】<br/>kernel: drivers/net/ethernet/stmicro/stmmac/ | 必须更新 |
+| 3    | UVC驱动支持NV12格式                       | 【问题描述】UVC驱动支持NV12格式 <br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>kernel: drivers/usb/gadget/function/uvc_v4l2.c | 必须更新 |
+| 4    | RKMPI中UVC sample应用更新，支持NV12格式等 | 【问题描述】UVC sample应用更新，支持NV12格式等 <br/>【原因分析】不涉及<br/>【解决方法】不涉及<br/>【主要修改文件】<br/>build: build/app/RKMPI_Release/example/rk_mpi_uvc |          |
+
+
+
 ## rk3588_linux_nvr_release_v1.4.0_20221021.xml Note
 
 | 序号 | 更新简要描述                                       | 详细描述                                                     | 备注     |
