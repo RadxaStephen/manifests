@@ -7,6 +7,16 @@
 [TOC]
 
 ---
+
+## rk3326_linux4.19_release_v1.2.1_20221120.xml Release Note
+
+```
+- Update rk817 codec driver to solve some bugs
+- Add motorcomm driver for RK631 PHY
+- Update weston10
+- Update rkbin for ddr issues
+```
+
 ## rk3326_linux4.19_release_v1.2.0_20220620.xml Release Note
 
 **Buildroot(2018.02-rc3)**

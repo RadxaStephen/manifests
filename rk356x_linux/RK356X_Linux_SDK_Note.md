@@ -7,6 +7,20 @@
 [TOC]
 
 ---
+## rk356x_linux_release_v1.3.1_20221120.xml Note
+
+```
+- Update rk817 codec driver to solve some bugs
+- Add motorcomm driver for RK631 PHY
+- Update weston10
+- Update debian10
+- Update camera_engine_rkaiq to V3.0x8.8
+- Update rknpu2 to v1.4.0
+- Update secureboot
+- Fix the rk3568 usb dwc3
+- Update rkbin for ddr issues
+```
+
 ## rk356x_linux_release_v1.3.0_20220620.xml Note
 
 **Buildroot**:

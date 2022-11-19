@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="../../" name="rk"/>
+
+  <default remote="rk" sync-j="4"/>
+
+  <include name="common/yocto.xml" />
+  <include name="include/rk356x_doc.xml" />
+  <include name="common/linux4.19.xml" />
+
+ <project name="linux/app-new/LibIPCProtocol" path="app/libIPCProtocol" revision="refs/tags/linux-4.19-gen-rkr3"/>
+  <project name="linux/app/aiserver" path="app/aiserver" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+  <project name="linux/app/dbserver" path="app/dbserver" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+  <project name="linux/app/eptz_demo" path="app/eptz_demo" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+  <project name="linux/app/libgdbus" path="app/libgdbus" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+  <project name="linux/app/librkdb" path="app/librkdb" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+  <project name="linux/app/rkaiq_tool_server" path="app/rkaiq_tool_server" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+  <project name="linux/bsp/external/bluetooth_bsa" path="external/bluetooth_bsa" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+  <project name="linux/bsp/external/broadcom_bsa" path="external/broadcom_bsa" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+  <project name="linux/debian" path="debian" revision="refs/tags/linux-4.19-gen-rkr3.1" remote="rk" clone-depth="1"/>
+  <project name="linux/device/rockchip" path="device/rockchip" revision="refs/tags/linux-4.19-gen-rkr3.1">
+    <linkfile src="common/mkfirmware.sh" dest="mkfirmware.sh"/>
+    <linkfile src="common/build.sh" dest="build.sh"/>
+    <linkfile src="common/rkflash.sh" dest="rkflash.sh"/>
+    <linkfile src="rk356x" dest="device/rockchip/.target_product"/>
+  </project>
+  <project name="linux/external/CallFunIpc" path="external/CallFunIpc" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+  <project name="linux/external/ble_wificonfig" path="external/ble_wificonfig" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+  <project name="linux/external/camera_engine_rkaiq" path="external/camera_engine_rkaiq" revision="refs/tags/linux-4.19-gen-rkr3" clone-depth="1"/>
+  <project name="linux/external/isp2-ipc" path="external/isp2-ipc" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+  <project name="linux/external/minilogger" path="external/minilogger" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+  <project name="linux/external/rkfacial" path="external/rkfacial" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+
+  <project name="linux/external/uvc_app" path="external/uvc_app" revision="refs/tags/linux-4.19-gen-rkr3.1"/>
+
+  <project name="linux/tools" path="tools" revision="37d2355d3e5b38d62ddb33a3ebcd5f95c197024f" upstream="master">
+    <linkfile src="windows/RKDevTool/RKDevTool_Release/rk356x-config.cfg" dest="tools/windows/RKDevTool/RKDevTool_Release/config.cfg"/>
+    <linkfile src="windows/RKDevTool/rockdev/rk356x-package-file" dest="tools/windows/RKDevTool/rockdev/package-file"/>
+    <linkfile src="windows/RKDevTool/rockdev/rk356x-mkupdate.bat" dest="tools/windows/RKDevTool/rockdev/mkupdate.bat"/>
+    <linkfile src="linux/Linux_Pack_Firmware/rockdev/rk356x-mkupdate.sh" dest="tools/linux/Linux_Pack_Firmware/rockdev/mkupdate.sh"/>
+    <linkfile src="linux/Linux_Pack_Firmware/rockdev/rk356x-package-file" dest="tools/linux/Linux_Pack_Firmware/rockdev/package-file"/>
+  </project>
+  <project name="rk/rknn-toolkit2" path="external/rknn-toolkit2" revision="refs/tags/linux-4.19-gen-rkr3.1" clone-depth="1"/>
+  <project name="rk/rknpu2" path="external/rknpu2" revision="refs/tags/linux-4.19-gen-rkr3.1" clone-depth="1"/>
+</manifest>

@@ -8,6 +8,16 @@
 
 ---
 
+## rk3288_linux4.19_release_v1.2.1_20221120.xml Release Note
+
+```
+- Update rk817 codec driver to solve some bugs
+- Add motorcomm driver for RK631 PHY
+- Update weston10
+- Update debian10
+- Update kernel/uboot/rkbin
+```
+
 ## rk3288_linux4.19_release_v1.2.0_20220620.xml Release Note
 
 ```

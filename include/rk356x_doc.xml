@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-<project name="linux/bsp/internal_doc" path="docs/.Socs" revision="refs/tags/linux-4.19-gen-rkr3">
+<project name="linux/bsp/internal_doc" path="docs/.Socs" revision="refs/tags/linux-4.19-gen-rkr3.1">
     <linkfile dest="docs/RK356X" src="RK356X"/>
 </project>
-<project name="linux/bsp/docs" path="docs" revision="refs/tags/linux-4.19-gen-rkr3">
+<project name="linux/bsp/docs" path="docs" revision="refs/tags/linux-4.19-gen-rkr3.1">
     <linkfile dest="docs/.Socs/RK356X/Rockchip_Developer_Guide_Linux_Software_CN.pdf" src="Rockchip_Developer_Guide_Linux_Software_CN.pdf"/>
 </project>
 

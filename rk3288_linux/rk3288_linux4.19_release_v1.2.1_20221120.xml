@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="../../" name="rk"/>
+
+  <default remote="rk" sync-j="4"/>
+
+  <include name="common/yocto.xml" />
+  <include name="include/rk3288_4.19_doc.xml" />
+  <include name="common/linux4.19.xml" />
+
+  <project name="linux/debian" path="debian" revision="refs/tags/linux-4.19-gen-rkr3.1" clone-depth="1"/>
+  <project name="linux/device/rockchip" path="device/rockchip" revision="refs/tags/linux-4.19-gen-rkr3.1">
+    <linkfile src="common/mkfirmware.sh" dest="mkfirmware.sh"/>
+    <linkfile src="common/build.sh" dest="build.sh"/>
+    <linkfile src="common/rkflash.sh" dest="rkflash.sh"/>
+    <linkfile src="rk3288" dest="device/rockchip/.target_product"/>
+  </project>
+  <project name="linux/external/camera_engine_rkisp" path="external/camera_engine_rkisp" revision="refs/tags/linux-4.19-gen-rkr3.1" clone-depth="1"/>
+  <project name="linux/tools" path="tools" revision="refs/tags/linux-4.19-gen-rkr3.1" clone-depth="1">
+    <linkfile src="windows/RKDevTool/RKDevTool_Release/rk3288-config.cfg" dest="tools/windows/RKDevTool/RKDevTool_Release/config.cfg"/>
+    <linkfile src="windows/RKDevTool/rockdev/rk3288-package-file" dest="tools/windows/RKDevTool/rockdev/package-file"/>
+    <linkfile src="windows/RKDevTool/rockdev/rk3288-mkupdate.bat" dest="tools/windows/RKDevTool/rockdev/mkupdate.bat"/>
+    <linkfile src="linux/Linux_Pack_Firmware/rockdev/rk3288-mkupdate.sh" dest="tools/linux/Linux_Pack_Firmware/rockdev/mkupdate.sh"/>
+    <linkfile src="linux/Linux_Pack_Firmware/rockdev/rk3288-package-file" dest="tools/linux/Linux_Pack_Firmware/rockdev/package-file"/>
+  </project>
+</manifest>
