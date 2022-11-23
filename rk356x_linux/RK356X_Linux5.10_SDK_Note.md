@@ -7,6 +7,23 @@
 [TOC]
 
 ---
+## rk356x_linux5.10_release_v1.0.2_20221120.xml Note
+
+```
+- Update rk817 codec driver to solve some bugs
+- Add motorcomm driver for RK631 PHY
+- Upgrade weston to Version 11
+- Update debian11
+- Update camera_engine_rkaiq to v3.0x9.1
+- Update secureboot
+- Fix the rk3568 usb dwc3
+- Update rkbin for ddr issues
+- Fixes Debian11 hardware cursor issue
+- Support amp function
+- Support more spiflash
+- To solve the instability problem of some chips when DDR run in 324MHz
+```
+
 ## rk356x_linux5.10_release_v1.0.1_20221020.xml Note
 
 ```

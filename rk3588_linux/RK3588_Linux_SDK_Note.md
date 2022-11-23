@@ -7,6 +7,27 @@
 [TOC]
 
 ---
+## rk3588_linux_release_v1.0.5_20221120.xml Note
+
+- Upgrade RK3588 GPU mali ddk to g15p0-01eac0
+- Update rk817 codec driver to solve some bugs
+- Add motorcomm driver for RK631 PHY
+- Upgrade weston to Version 11
+- Update debian11
+- Update camera_engine_rkaiq to v3.0x9.1
+- Update secureboot
+- Fix the rk3588 usb dwc3
+- Update rkbin for ddr issues
+- Fixes Debian11 hardware cursor issue
+- Enable RK_ENABLE_A76_L2_FLUSH_TO_L3 function
+- Support amp function
+- Derate/perbank refresh can be enable/disable by ddrbin_tool
+- Support pstore function
+- boot FSP configurable by ddrbin_tool
+- Enable LPDDR5 DMC function.
+- Support LPDDR5 byte mode DRAM
+- Recycle 256MB memory(overlap with REG space). This function can be disable by ddrbin_tool
+
 ## rk3588_linux_release_v1.0.4_20221020.xml Note
 
 - Fix the xserver cause memory leak in Mali

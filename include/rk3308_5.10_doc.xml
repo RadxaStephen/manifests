@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-<project name="linux/bsp/internal_doc" path="docs/.Socs" revision="refs/tags/linux-5.10-gen-rkr3.4" clone-depth="1">
+<project name="linux/bsp/internal_doc" path="docs/.Socs" revision="refs/tags/linux-5.10-gen-rkr3.5" clone-depth="1">
     <linkfile dest="docs/RK3308" src="RK3308"/>
 </project>
-<project name="linux/bsp/docs" path="docs" revision="refs/tags/linux-5.10-gen-rkr3.4" clone-depth="1">
+<project name="linux/bsp/docs" path="docs" revision="refs/tags/linux-5.10-gen-rkr3.5" clone-depth="1">
     <linkfile dest="docs/.Socs/RK3308/Rockchip_Developer_Guide_Linux_Software_CN.pdf" src="Rockchip_Developer_Guide_Linux_Software_CN.pdf"/>
 </project>
 

@@ -7,6 +7,14 @@
 [TOC]
 
 ---
+## rk3308_linux5.10_release_v1.0.2_20221120.xml Note
+
+```
+- Update rk817 codec driver to solve some bugs
+- Add motorcomm driver for RK631 PHY
+- Upgrade weston to Version 11
+- Compat with busybox ps
+```
 
 ## rk3308_linux5.10_release_v1.0.1_20221020.xml Note
 
